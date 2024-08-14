@@ -1,8 +1,7 @@
-import { Container, Flex, Image, Text } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
+import { Container, Flex, Image, Text, Link } from "@chakra-ui/react";
+import { Link as RouterLink } from "react-router-dom";
 
 const Navbar = () => {
-
   return (
     <Container
       p={0}
@@ -11,31 +10,70 @@ const Navbar = () => {
       display={"flex"}
       flexDirection={"row"}
       px={10}
+      position={"fixed"}
+      zIndex={1}
     >
       <Flex
         w={"full"}
         justifyContent={{ base: "center", md: "space-between" }}
         alignItems={"center"}
+        gap={"5rem"}
       >
-        <Image src="./logo.png" h={"1.6rem"} />
+        <Link as={RouterLink} to={"/"}>
+          <Image
+            src="./logo.png"
+            h={"1.6rem"}
+            _hover={{
+              h: "1.8rem",
+              transitionDuration: ".4s",
+              transitionTimingFunction: "ease-in-out",
+            }}
+          />
+        </Link>
+
+        {/* <Switch size={"lg"} cursor={"pointer"}/> */}
 
         <Flex
           fontFamily={"Source Code Pro"}
           fontWeight={700}
           fontSize={20}
           gap={"3rem"}
-          // color={theme.colors.primary.main}
+          textShadow=".5px .5px #19D1C1"
           display={{ sm: "none", md: "flex" }}
         >
-          <Link to={"/about"}>
-            <Text>.about</Text>
-          </Link>
-          <Link to={"/project"}>
-            <Text>.project</Text>
-          </Link>
-          <Link to={"/contact"}>
-            <Text>.contact</Text>
-          </Link>
+          <RouterLink to={"/about"}>
+            <Text
+              _hover={{
+                fontSize: 22,
+                transitionDuration: ".4s",
+                transitionTimingFunction: "ease-in-out",
+              }}
+            >
+              .about
+            </Text>
+          </RouterLink>
+          <RouterLink to={"/project"}>
+            <Text
+              _hover={{
+                fontSize: 22,
+                transitionDuration: ".4s",
+                transitionTimingFunction: "ease-in-out",
+              }}
+            >
+              .project
+            </Text>
+          </RouterLink>
+          <RouterLink to={"/contact"}>
+            <Text
+              _hover={{
+                fontSize: 22,
+                transitionDuration: ".4s",
+                transitionTimingFunction: "ease-in-out",
+              }}
+            >
+              .contact
+            </Text>
+          </RouterLink>
         </Flex>
       </Flex>
     </Container>
