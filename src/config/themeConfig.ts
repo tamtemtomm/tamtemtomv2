@@ -1,25 +1,23 @@
-import { extendTheme, } from "@chakra-ui/react";
+import { extendTheme, ThemeConfig } from "@chakra-ui/react";
+import { mode } from "@chakra-ui/theme-tools";
+
+const styles = {
+  global: (props) => ({
+    body: {
+      color: mode("#353BA7", "#353BA7")(props),
+      bg: mode("#010309", "#f8f9fe")(props),
+    },
+  }),
+};
+
+const config: ThemeConfig = {
+  initialColorMode: "dark",
+  useSystemColorMode: false,
+};
 
 const themeConfig = extendTheme({
-  colors: {
-    primary: {
-     main: "#353BA7",
-   },
-   secondary:{
-    main: "#698AE8"
-   },
-   accent:{
-    main: "#19D1C1"
-   },
-   background:{
-    light: "#F8F9FE",
-    dark: "010309"
-   },
-   text:{
-    light: "#0B0925",
-    dark: "#F8F9FE"
-   }
- }
+  styles,
+  config,
 });
 
-export default themeConfig
+export default themeConfig;
