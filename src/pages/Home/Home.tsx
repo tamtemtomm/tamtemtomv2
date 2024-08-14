@@ -1,11 +1,17 @@
-import { Container } from "@chakra-ui/react"
+import { Container, useTheme } from "@chakra-ui/react";
 
 const Home = () => {
-  return (
-    <Container>
-        Home
-    </Container>
-  )
-}
+  const theme = useTheme();
 
-export default Home
+  return (
+    <>
+      <Container
+        maxW={"container.2xl"}
+        minH={"100vh"}
+        bg={theme.colors.background.light}
+      ></Container>
+    </>
+  );
+};
+
+export default Home;

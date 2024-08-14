@@ -1,22 +1,25 @@
-const themeConfig= {
-  breakpoints: ["30em", "48em", "62em", "80em"],
-  fonts: {
-    heading: '"Avenir Next", sans-serif',
-    body: "system-ui, sans-serif",
-    mono: "Menlo, monospace",
-  },
-  fontSizes: {
-    xs: "0.75rem",
-    sm: "0.875rem",
-    md: "1rem",
-    lg: "1.125rem",
-    xl: "1.25rem",
-    "2xl": "1.5rem",
-    "3xl": "1.875rem",
-    "4xl": "2.25rem",
-    "5xl": "3rem",
-    "6xl": "4rem",
-  },
-};
+import { extendTheme, } from "@chakra-ui/react";
 
-export default themeConfig;
+const themeConfig = extendTheme({
+  colors: {
+    primary: {
+     main: "#353BA7",
+   },
+   secondary:{
+    main: "#698AE8"
+   },
+   accent:{
+    main: "#19D1C1"
+   },
+   background:{
+    light: "#F8F9FE",
+    dark: "010309"
+   },
+   text:{
+    light: "#0B0925",
+    dark: "#F8F9FE"
+   }
+ }
+});
+
+export default themeConfig
