@@ -3,7 +3,6 @@ import {
   VStack,
   Text,
   Box,
-  Image,
   Flex,
   useColorModeValue,
 } from "@chakra-ui/react";
