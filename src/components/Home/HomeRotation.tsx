@@ -1,10 +1,13 @@
 import { Image } from "@chakra-ui/react";
 
+import Circle2 from "../../assets/rotation/Circle2Fix.png";
+import Circle3 from "../../assets/rotation/Circle3Fix.png";
+
 const HomeRotation = () => {
   return (
     <>
       <Image
-        src="./rotation/Circle3Fix.png"
+        src={Circle3}
         opacity={0.3}
         position={"absolute"}
         objectFit={"cover"}
@@ -13,7 +16,7 @@ const HomeRotation = () => {
         style={{ animation: "spin 3s linear infinite" }}
       />
       <Image
-        src="./rotation/Circle2Fix.png"
+        src={Circle2}
         opacity={0.1}
         position={"absolute"}
         zIndex={-1}
@@ -21,7 +24,7 @@ const HomeRotation = () => {
       />
 
       <Image
-        src="./rotation/Circle2Fix.png"
+        src={Circle2}
         opacity={0.1}
         position={"absolute"}
         boxSize={"1500px"}
@@ -30,7 +33,7 @@ const HomeRotation = () => {
         style={{ animation: "spin 7s linear infinite" }}
       />
       <Image
-        src="./rotation/Circle2Fix.png"
+        src={Circle2}
         opacity={0.1}
         position={"absolute"}
         boxSize={"1800px"}
@@ -39,7 +42,7 @@ const HomeRotation = () => {
         style={{ animation: "spin 8s linear infinite" }}
       />
       <Image
-        src="./rotation/Circle2Fix.png"
+        src={Circle2}
         opacity={0.1}
         position={"absolute"}
         boxSize={"2000px"}

@@ -12,6 +12,11 @@ import HomeButton from "../../components/Home/HomeButton";
 import HomeSocial from "../../components/Home/HomeSocial";
 import HomeRotation from "../../components/Home/HomeRotation";
 
+import ProfileImage from "../../assets/pic.jpg"
+import LinkedinIcon from "../../assets/icon/linkedin.webp"
+import GithubIcon from "../../assets/icon/github.png"
+import InstagramIcon from "../../assets/icon/instagram.webp"
+
 const Home = () => {
   return (
     <>
@@ -84,7 +89,7 @@ const Home = () => {
             overflow={"hidden"}
             my={"2rem"}
           >
-            <Image src="./pic.jpg" cursor={"pointer"} />
+            <Image src={ProfileImage} cursor={"pointer"} />
           </Box>
           <VStack>
             <Text
@@ -116,17 +121,17 @@ const Home = () => {
             >
               <HomeSocial
                 link="https://www.linkedin.com/in/timo-widyanvolta-35a276217/"
-                icon="./icon/linkedin.webp"
+                icon={LinkedinIcon}
               />
 
               <HomeSocial
                 link="https://github.com/tamtemtomm"
-                icon="./icon/github.png"
+                icon={GithubIcon}
               />
 
               <HomeSocial
                 link="https://instagram.com/tomtamtumtemtam"
-                icon="./icon/instagram.webp"
+                icon={InstagramIcon}
               />
             </Box>
             <Text
