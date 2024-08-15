@@ -5,7 +5,7 @@ const styles = {
   global: (props: any) => ({
     body: {
       color: mode("#353BA7", "#353BA7")(props),
-      bg: mode("#f8f9fe","#010309",)(props),
+      bg: mode("#f8f9fe", "#010309")(props),
     },
   }),
 };
@@ -18,6 +18,15 @@ const config: ThemeConfig = {
 const themeConfig = extendTheme({
   styles,
   config,
+  components: {
+    Button: {
+      sizes: {
+        xs: {
+          fontSize: "8px",
+        },
+      },
+    },
+  },
 });
 
 export default themeConfig;

@@ -4,7 +4,6 @@ import {
   Image,
   Text,
   Link,
-  Box,
   useColorMode,
   Button,
 } from "@chakra-ui/react";
@@ -16,38 +15,30 @@ const Navbar = () => {
     <Container
       p={0}
       my={4}
-      pt={{ base: 2, md: 0 }}
-      maxW={"container.2xl"}
+      maxW={{ base: "container.sm", sm:"container.xl", md: "container.2xl" }}
       display={"flex"}
       flexDirection={"row"}
-      px={10}
+      px={{ base: 4, md: 10 }}
       position={"fixed"}
       zIndex={1}
       overflow={"hidden"}
     >
       <Flex
         w={"full"}
-        justifyContent={{ base: "center", md: "space-between" }}
+        justifyContent={"space-between"}
         alignItems={"center"}
-        flexDir={{ base: "column", md: "row" }}
-        gap={{ base: 5, md: "5rem" }}
+        gap={{ base: ".1rem", md: "5rem" }}
       >
-        <Link as={RouterLink} to={"/"} flex={{ base: "none", md: 1 }}>
-          <Box
-            border={{ base: "1px solid #353ba7", md: "none" }}
-            p={{ base: 3, md: 0 }}
-            borderRadius={"50%"}
-          >
-            <Image
-              src="./logo.png"
-              h={"1.6rem"}
-              _hover={{
-                h: "1.8rem",
-                transitionDuration: ".4s",
-                transitionTimingFunction: "ease-in-out",
-              }}
-            />
-          </Box>
+        <Link as={RouterLink} to={"/"} flex={1}>
+          <Image
+            src="./logo.png"
+            h={{ base: ".5rem", md: "1.6rem" }}
+            _hover={{
+              h: "1.8rem",
+              transitionDuration: ".4s",
+              transitionTimingFunction: "ease-in-out",
+            }}
+          />
         </Link>
 
         {/* <Switch size={"lg"} cursor={"pointer"}/> */}
@@ -62,10 +53,10 @@ const Navbar = () => {
         <Flex
           fontFamily={"Source Code Pro"}
           fontWeight={700}
-          fontSize={20}
-          gap={"3rem"}
+          fontSize={{ base: 8, md: 20 }}
+          gap={{ base: ".5rem", md: "3rem" }}
           // textShadow=".2px .2px #19D1C1"
-          display={{ base: "none", md: "flex" }}
+          display={"flex"}
         >
           <RouterLink to={"/about"}>
             <Text

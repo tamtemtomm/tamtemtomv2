@@ -83,7 +83,7 @@ const Home = () => {
             h={{ base: "10rem", md: "12rem" }}
             borderRadius={"50%"}
             overflow={"hidden"}
-            my={3}
+            my={"2rem"}
           >
             <Image src="./pic.jpg" cursor={"pointer"} />
           </Box>
