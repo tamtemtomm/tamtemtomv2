@@ -31,7 +31,7 @@ const Home = () => {
         <VStack
           alignItems={"center"}
           justifyContent="center"
-          gap={4}
+          gap={".5rem"}
           my={"2rem"}
         >
           <Text
