@@ -5,7 +5,7 @@ import {
   Box,
   Image,
   Flex,
-  useColorModeValue
+  useColorModeValue,
 } from "@chakra-ui/react";
 
 import HomeButton from "../../components/Home/HomeButton";
@@ -13,11 +13,10 @@ import HomeSocial from "../../components/Home/HomeSocial";
 import HomeRotation from "../../components/Home/HomeRotation";
 
 const Home = () => {
-
   return (
     <>
       <Container
-        maxW={"container.2xl"}
+        maxW={{ base: "container.sm", sm: "container.xl", md: "container.2xl" }}
         minH={"100vh"}
         display={"flex"}
         justifyContent={"center"}
@@ -133,14 +132,14 @@ const Home = () => {
             <Text
               position="absolute"
               fontSize={{ base: "xs", md: "sm" }}
-              bottom={5}
+              bottom={"1rem"}
             >
               Copyright © 2024 Tamtemtom
             </Text>
           </VStack>
         </VStack>
 
-        <HomeRotation/>
+        <HomeRotation />
       </Container>
     </>
   );

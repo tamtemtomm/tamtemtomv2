@@ -21,6 +21,7 @@ const HomeButton = ({ link, text }: HomeButtonInterface) => {
         bgGradient={bgColor}
         color={"white"}
         display={"flex"}
+        border={"none"}
         gap={2}
         alignItems={"center"}
         size={{ base: "xs", md: "sm" }}

@@ -15,7 +15,7 @@ const Navbar = () => {
     <Container
       p={0}
       my={4}
-      maxW={{ base: "container.sm", sm:"container.xl", md: "container.2xl" }}
+      maxW={"container.2xl"}
       display={"flex"}
       flexDirection={"row"}
       px={{ base: 4, md: 10 }}
@@ -46,6 +46,7 @@ const Navbar = () => {
           onClick={toggleColorMode}
           color={"#353BA7"}
           size={{ base: "xs", md: "sm" }}
+          border={"none"}
         >
           .mode = {colorMode === "light" ? "light" : "dark"}
         </Button>
