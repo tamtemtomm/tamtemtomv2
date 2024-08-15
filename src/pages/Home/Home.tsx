@@ -5,7 +5,7 @@ import {
   Box,
   Image,
   Flex,
-
+  useColorModeValue
 } from "@chakra-ui/react";
 
 import HomeButton from "../../components/Home/HomeButton";
@@ -95,7 +95,7 @@ const Home = () => {
               fontFamily={"Open Sans"}
               fontSize={{ base: 11, sm: 12, md: 15, lg: 16 }}
               mt={2}
-              color={"gray.600"}
+              color={useColorModeValue("gray.600", "#353BA7")}
               cursor={"pointer"}
               _hover={{
                 transitionDuration: ".4s",

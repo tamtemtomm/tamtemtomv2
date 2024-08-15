@@ -23,13 +23,14 @@ const Navbar = () => {
       px={10}
       position={"fixed"}
       zIndex={1}
+      overflow={"hidden"}
     >
       <Flex
         w={"full"}
         justifyContent={{ base: "center", md: "space-between" }}
         alignItems={"center"}
         flexDir={{ base: "column", md: "row" }}
-        gap={{base: 3, md: "5rem"}}
+        gap={{ base: 5, md: "5rem" }}
       >
         <Link as={RouterLink} to={"/"} flex={{ base: "none", md: 1 }}>
           <Box
@@ -50,7 +51,11 @@ const Navbar = () => {
         </Link>
 
         {/* <Switch size={"lg"} cursor={"pointer"}/> */}
-        <Button onClick={toggleColorMode} color={"#353BA7"} size={"sm"}>
+        <Button
+          onClick={toggleColorMode}
+          color={"#353BA7"}
+          size={{ base: "xs", md: "sm" }}
+        >
           .mode = {colorMode === "light" ? "light" : "dark"}
         </Button>
 
@@ -60,7 +65,7 @@ const Navbar = () => {
           fontSize={20}
           gap={"3rem"}
           // textShadow=".2px .2px #19D1C1"
-          display={{ sm: "none", md: "flex" }}
+          display={{ base: "none", md: "flex" }}
         >
           <RouterLink to={"/about"}>
             <Text
