@@ -17,7 +17,7 @@ const HomeButton = ({ link, text }: HomeButtonInterface) => {
     <Link to={link} rel="noopener noreferrer" target="_blank">
       <Button
         fontWeight={600}
-        fontFamily={"Open Sans"}
+        fontFamily={"Source Code Pro"}
         bgGradient={bgColor}
         color={"white"}
         display={"flex"}
