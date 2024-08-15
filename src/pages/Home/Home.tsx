@@ -20,7 +20,7 @@ const Home = () => {
   return (
     <>
       <Container
-        maxW={{ base: "container.sm", sm: "container.xl", md: "container.2xl" }}
+        maxW={"container.2xl"}
         minH={"100vh"}
         display={"flex"}
         justifyContent={"center"}
