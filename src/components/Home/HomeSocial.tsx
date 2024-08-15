@@ -12,11 +12,7 @@ const HomeSocial = ({ link, icon }: HomeSocialInterface) => {
       <Image
         src={icon}
         h={8}
-        _hover={{
-          h: 10,
-          transitionDuration: "0.4s",
-          transitionTimingFunction: "ease-in-out",
-        }}
+        
       />
     </Link>
   );

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Button } from "@chakra-ui/react";
+import { Button, useColorModeValue } from "@chakra-ui/react";
 import { FaDownload } from "react-icons/fa";
 
 interface HomeButtonInterface {
@@ -8,12 +8,13 @@ interface HomeButtonInterface {
 }
 
 const HomeButton = ({ link, text }: HomeButtonInterface) => {
+  const bgColor = useColorModeValue("linear(to-br, #2D4286, #19d1c1)", "linear(to-br, #2D4286, #19d1c1)")
   return (
     <Link to={link} rel="noopener noreferrer" target="_blank">
       <Button
         fontWeight={600}
         fontFamily={"Open Sans"}
-        bgGradient="linear(to-br, #2D4286, #19d1c1)"
+        bgGradient={bgColor}
         display={"flex"}
         gap={2}
         alignItems={"center"}

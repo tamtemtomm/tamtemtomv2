@@ -1,19 +1,31 @@
-import { Container, VStack, Text, Box, Image, Flex } from "@chakra-ui/react";
+import {
+  Container,
+  VStack,
+  Text,
+  Box,
+  Image,
+  Flex,
+
+} from "@chakra-ui/react";
 
 import HomeButton from "../../components/Home/HomeButton";
 import HomeSocial from "../../components/Home/HomeSocial";
+import HomeRotation from "../../components/Home/HomeRotation";
 
 const Home = () => {
+
   return (
     <>
       <Container
-        maxW={"container.xl"}
+        maxW={"container.2xl"}
         minH={"100vh"}
         display={"flex"}
         justifyContent={"center"}
         alignItems={"center"}
         pt={1}
         position={"relative"}
+        overflowX={"hidden"}
+        overflowY={"hidden"}
         // bg={theme.colors.background.light}
       >
         <VStack
@@ -44,11 +56,11 @@ const Home = () => {
             <Text
               as={"span"}
               fontSize={"1.5rem"}
+              className="span-weeb"
               color={"#19d1c1"}
               display={{ base: "none", md: "inline" }}
-            >
-              any
-            </Text>
+              // _after={{content: "weeb"}}
+            ></Text>
           </Text>
           <Flex
             w={"30%"}
@@ -77,12 +89,13 @@ const Home = () => {
           </Box>
           <VStack>
             <Text
-              w={"50%"}
+              w={"51%"}
               textAlign={"center"}
               fontWeight={600}
               fontFamily={"Open Sans"}
               fontSize={{ base: 11, sm: 12, md: 15, lg: 16 }}
               mt={2}
+              color={"gray.600"}
               cursor={"pointer"}
               _hover={{
                 transitionDuration: ".4s",
@@ -92,7 +105,7 @@ const Home = () => {
               // fontFamily={"inter"}
             >
               Hi! I am Timo. A college student who loves coding, music, anime,
-              and another wacky stuff. Feel free to contact me if you wanna chat
+              and other wacky stuffs. Feel free to contact me if you wanna chat
               along.
             </Text>
             <Box
@@ -126,6 +139,8 @@ const Home = () => {
             </Text>
           </VStack>
         </VStack>
+
+        <HomeRotation/>
       </Container>
     </>
   );
