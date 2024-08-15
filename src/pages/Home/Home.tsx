@@ -12,10 +12,10 @@ import HomeButton from "../../components/Home/HomeButton";
 import HomeSocial from "../../components/Home/HomeSocial";
 import HomeRotation from "../../components/Home/HomeRotation";
 
-import ProfileImage from "../../assets/pic.jpg"
-import LinkedinIcon from "../../assets/icon/linkedin.webp"
-import GithubIcon from "../../assets/icon/github.png"
-import InstagramIcon from "../../assets/icon/instagram.webp"
+import ProfileImage from "../../assets/pic.jpg";
+import LinkedinIcon from "../../assets/icon/linkedin.webp";
+import GithubIcon from "../../assets/icon/github.png";
+import InstagramIcon from "../../assets/icon/instagram.webp";
 
 const Home = () => {
   return (
@@ -89,7 +89,7 @@ const Home = () => {
             overflow={"hidden"}
             my={"2rem"}
           >
-            <Image src={ProfileImage} cursor={"pointer"} />
+            <img src={ProfileImage} />
           </Box>
           <VStack>
             <Text
