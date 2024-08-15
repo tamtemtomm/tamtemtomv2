@@ -1,5 +1,7 @@
-import { Container, VStack, Text, Box, Image } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
+import { Container, VStack, Text, Box, Image, Flex } from "@chakra-ui/react";
+
+import HomeButton from "../../components/Home/HomeButton";
+import HomeSocial from "../../components/Home/HomeSocial";
 
 const Home = () => {
   return (
@@ -14,27 +16,62 @@ const Home = () => {
         position={"relative"}
         // bg={theme.colors.background.light}
       >
-        <VStack alignItems={"center"} gap={8} my={"2rem"}>
+        <VStack
+          alignItems={"center"}
+          justifyContent="center"
+          gap={4}
+          my={"2rem"}
+        >
           <Text
             bgGradient="linear(to-b, #2D4286, #698AE8)"
             bgClip="text"
             fontWeight={700}
             fontSize={"3rem"}
             fontFamily={"Source Code Pro"}
+            cursor={"pointer"}
             // textShadow='.1px .1px #19d1c1'
           >
-            Tamtemtom 
-            <Text as={"span"} fontSize={"1.5rem"} color={"gray.700"} display={{base: "none", md: "inline"}}>
-            {" "}:{" "}
+            Tamtemtom
+            <Text
+              as={"span"}
+              fontSize={"1.5rem"}
+              color={"gray.700"}
+              display={{ base: "none", md: "inline" }}
+            >
+              {" "}
+              :{" "}
             </Text>
-            <Text as={"span"} fontSize={"1.5rem"} color={"#19d1c1"} display={{base: "none", md: "inline"}}>any</Text>
+            <Text
+              as={"span"}
+              fontSize={"1.5rem"}
+              color={"#19d1c1"}
+              display={{ base: "none", md: "inline" }}
+            >
+              any
+            </Text>
           </Text>
+          <Flex
+            w={"30%"}
+            alignItems={"center"}
+            justifyContent={"center"}
+            gap={4}
+          >
+            <HomeButton
+              link="https://drive.google.com/file/d/1-u8v1lBgT943PwdGw__ciq9nbbb6gjWs/view?usp=drive_link"
+              text="Curriculum Vitae"
+            />
+            <HomeButton
+              link="https://drive.google.com/file/d/14saSCBCPc9ErfJ8FCyC_UTZ6JnLk6cdC/view?usp=drive_link"
+              text="Portfolio"
+            />
+          </Flex>
 
           <Box
-            w={{ base: "10rem", md: "15rem" }}
-            h={{ base: "10rem", md: "15rem" }}
+            w={{ base: "10rem", md: "12rem" }}
+            h={{ base: "10rem", md: "12rem" }}
             borderRadius={"50%"}
             overflow={"hidden"}
+            my={3}
           >
             <Image src="./pic.jpg" cursor={"pointer"} />
           </Box>
@@ -46,7 +83,12 @@ const Home = () => {
               fontFamily={"Open Sans"}
               fontSize={{ base: 11, sm: 12, md: 15, lg: 16 }}
               mt={2}
-              textShadow="1px 1px #19d1c1"
+              cursor={"pointer"}
+              _hover={{
+                transitionDuration: ".4s",
+                transitionTimingFunction: "ease-in-out",
+                textShadow: ".2px .2px #19d1c1",
+              }}
               // fontFamily={"inter"}
             >
               Hi! I am Timo. A college student who loves coding, music, anime,
@@ -60,51 +102,20 @@ const Home = () => {
               mt={4}
               justifyContent={"space-between"}
             >
-              <Link
-                target="_blank"
-                rel="noopener noreferrer"
-                to={"https://www.linkedin.com/in/timo-widyanvolta-35a276217/"}
-              >
-                <Image
-                  src={"./icon/linkedin.webp"}
-                  h={8}
-                  _hover={{
-                    h: 10,
-                    transitionDuration: "0.4s",
-                    transitionTimingFunction: "ease-in-out",
-                  }}
-                />
-              </Link>
-              <Link
-                target="_blank"
-                rel="noopener noreferrer"
-                to={"https://github.com/tamtemtomm"}
-              >
-                <Image
-                  src={"./icon/github.png"}
-                  h={8}
-                  _hover={{
-                    h: 10,
-                    transitionDuration: "0.4s",
-                    transitionTimingFunction: "ease-in-out",
-                  }}
-                />
-              </Link>
-              <Link
-                target="_blank"
-                rel="noopener noreferrer"
-                to={"https://instagram.com/tomtamtumtemtam"}
-              >
-                <Image
-                  src={"./icon/instagram.webp"}
-                  h={7}
-                  _hover={{
-                    h: 9,
-                    transitionDuration: "0.4s",
-                    transitionTimingFunction: "ease-in-out",
-                  }}
-                />
-              </Link>
+              <HomeSocial
+                link="https://www.linkedin.com/in/timo-widyanvolta-35a276217/"
+                icon="./icon/linkedin.webp"
+              />
+
+              <HomeSocial
+                link="https://github.com/tamtemtomm"
+                icon="./icon/github.png"
+              />
+
+              <HomeSocial
+                link="https://instagram.com/tomtamtumtemtam"
+                icon="./icon/instagram.webp"
+              />
             </Box>
             <Text
               position="absolute"

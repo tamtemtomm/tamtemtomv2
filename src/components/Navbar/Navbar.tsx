@@ -38,7 +38,7 @@ const Navbar = () => {
           fontWeight={700}
           fontSize={20}
           gap={"3rem"}
-          textShadow=".5px .5px #19D1C1"
+          // textShadow=".2px .2px #19D1C1"
           display={{ sm: "none", md: "flex" }}
         >
           <RouterLink to={"/about"}>
@@ -47,6 +47,7 @@ const Navbar = () => {
                 fontSize: 22,
                 transitionDuration: ".4s",
                 transitionTimingFunction: "ease-in-out",
+                textShadow:".5px .5px #19D1C1"
               }}
             >
               .about
@@ -58,6 +59,7 @@ const Navbar = () => {
                 fontSize: 22,
                 transitionDuration: ".4s",
                 transitionTimingFunction: "ease-in-out",
+                textShadow:".5px .5px #19D1C1"
               }}
             >
               .project
@@ -69,6 +71,7 @@ const Navbar = () => {
                 fontSize: 22,
                 transitionDuration: ".4s",
                 transitionTimingFunction: "ease-in-out",
+                textShadow:".5px .5px #19D1C1"
               }}
             >
               .contact
