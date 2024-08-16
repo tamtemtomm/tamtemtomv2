@@ -2,7 +2,6 @@ import {
   Container,
   Flex,
   Image,
-  Text,
   Link,
   useColorMode,
   Button,
@@ -10,6 +9,7 @@ import {
 import { Link as RouterLink } from "react-router-dom";
 
 import Logo from "../../assets/logo.png"
+import NavbarLink from "./NavbarLink";
 
 const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -28,7 +28,7 @@ const Navbar = () => {
       <Flex
         w={"full"}
         justifyContent={"space-between"}
-        alignItems={"center"}
+        alignItems={"center"} 
         gap={{ base: ".1rem", md: "5rem" }}
       >
         <Link as={RouterLink} to={"/"} flex={1}>
@@ -61,39 +61,10 @@ const Navbar = () => {
           // textShadow=".2px .2px #19D1C1"
           display={"flex"}
         >
-          <RouterLink to={"/about"}>
-            <Text
-              _hover={{
-                transitionDuration: ".4s",
-                transitionTimingFunction: "ease-in-out",
-                textShadow: ".5px .5px #19D1C1",
-              }}
-            >
-              .about
-            </Text>
-          </RouterLink>
-          <RouterLink to={"/project"}>
-            <Text
-              _hover={{
-                transitionDuration: ".4s",
-                transitionTimingFunction: "ease-in-out",
-                textShadow: ".5px .5px #19D1C1",
-              }}
-            >
-              .project
-            </Text>
-          </RouterLink>
-          <RouterLink to={"/contact"}>
-            <Text
-              _hover={{
-                transitionDuration: ".4s",
-                transitionTimingFunction: "ease-in-out",
-                textShadow: ".5px .5px #19D1C1",
-              }}
-            >
-              .contact
-            </Text>
-          </RouterLink>
+          <NavbarLink link="/about" text=".about"/>
+          <NavbarLink link="/projects" text=".projects"/>
+          <NavbarLink link="/contact" text=".contact"/>
+          
         </Flex>
       </Flex>
     </Container>

@@ -19,7 +19,7 @@ const HomeButton = ({ link, text }: HomeButtonInterface) => {
         fontWeight={600}
         fontFamily={"Source Code Pro"}
         bgGradient={bgColor}
-        color={"white"}
+        color={"whiteAlpha.800"}
         display={"flex"}
         border={"none"}
         gap={2}
@@ -31,6 +31,13 @@ const HomeButton = ({ link, text }: HomeButtonInterface) => {
           fontWeight: "800",
           transitionDuration: "0.4s",
           transitionTimingFunction: "ease-in-out",
+        }}
+        _active={{
+          bgGradient: "linear(to-br, #2D4286, #19d1c1)",
+          bgClip: "text",
+          fontWeight: "800",
+          transitionDuration: "0.2s",
+          transitionTimingFunction: "ease-in",
         }}
       >
         <Text>{text}</Text>

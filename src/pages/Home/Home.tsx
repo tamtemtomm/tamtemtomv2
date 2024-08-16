@@ -4,17 +4,16 @@ import {
   Text,
   Box,
   Flex,
-  useColorModeValue,
+  useColorModeValue
 } from "@chakra-ui/react";
+
+import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
 
 import HomeButton from "../../components/Home/HomeButton";
 import HomeSocial from "../../components/Home/HomeSocial";
 import HomeRotation from "../../components/Home/HomeRotation";
 
 import ProfileImage from "../../assets/pic.jpg";
-import LinkedinIcon from "../../assets/icon/linkedin.webp";
-import GithubIcon from "../../assets/icon/github.png";
-import InstagramIcon from "../../assets/icon/instagram.webp";
 
 const Home = () => {
   return (
@@ -98,7 +97,7 @@ const Home = () => {
               fontFamily={"Open Sans"}
               fontSize={{ base: 11, sm: 12, md: 15, lg: 16 }}
               mt={2}
-              color={useColorModeValue("gray.600", "#353BA7")}
+              color={useColorModeValue("gray.600", "whiteAlpha.800") }
               cursor={"pointer"}
               _hover={{
                 transitionDuration: ".4s",
@@ -109,7 +108,7 @@ const Home = () => {
             >
               Hi! I am Timo. A college student who loves coding, music, anime,
               and other wacky stuffs. Feel free to contact me if you wanna chat
-              along.
+              along!
             </Text>
             <Box
               display={"flex"}
@@ -120,23 +119,24 @@ const Home = () => {
             >
               <HomeSocial
                 link="https://www.linkedin.com/in/timo-widyanvolta-35a276217/"
-                icon={LinkedinIcon}
+                Icon={FaLinkedin}
               />
 
               <HomeSocial
                 link="https://github.com/tamtemtomm"
-                icon={GithubIcon}
+                Icon={FaGithub}
               />
 
               <HomeSocial
                 link="https://instagram.com/tomtamtumtemtam"
-                icon={InstagramIcon}
+                Icon={FaInstagram}
               />
             </Box>
             <Text
               position="absolute"
               fontSize={{ base: "xs", md: "sm" }}
               bottom={"1rem"}
+              color={"gray.700"}
             >
               Copyright © 2024 Tamtemtom
             </Text>

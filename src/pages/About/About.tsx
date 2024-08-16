@@ -1,7 +1,7 @@
 import Construction from "../../components/Utils/Construction";
 
-const Projects = () => {
+const About = () => {
   return <Construction />;
 };
 
-export default Projects;
+export default About;

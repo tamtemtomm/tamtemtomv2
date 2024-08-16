@@ -17,7 +17,7 @@ const HomeRotation = () => {
       />
       <Image
         src={Circle2}
-        opacity={0.1}
+        opacity={0.05}
         position={"absolute"}
         zIndex={-1}
         style={{ animation: "spin 6s linear infinite" }}
@@ -25,7 +25,7 @@ const HomeRotation = () => {
 
       <Image
         src={Circle2}
-        opacity={0.1}
+        opacity={0.04}
         position={"absolute"}
         boxSize={"1500px"}
         objectFit="cover"
@@ -34,7 +34,7 @@ const HomeRotation = () => {
       />
       <Image
         src={Circle2}
-        opacity={0.1}
+        opacity={0.03}
         position={"absolute"}
         boxSize={"1800px"}
         objectFit="cover"
@@ -43,7 +43,7 @@ const HomeRotation = () => {
       />
       <Image
         src={Circle2}
-        opacity={0.1}
+        opacity={0.02}
         position={"absolute"}
         boxSize={"2000px"}
         objectFit="cover"
