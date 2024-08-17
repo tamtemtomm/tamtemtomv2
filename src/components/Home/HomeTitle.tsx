@@ -2,7 +2,7 @@ import { Text } from "@chakra-ui/react";
 const HomeTitle = () => {
   return (
     <Text
-      bgGradient="linear(to-b, #2D4286, #698AE8)"
+      bg="#2D4286"
       bgClip="text"
       fontWeight={700}
       fontSize={"3rem"}
@@ -24,7 +24,7 @@ const HomeTitle = () => {
         as={"span"}
         fontSize={"1.5rem"}
         className="span-weeb"
-        color={"#19d1c1"}
+        color={"#698AE8"}
         display={{ base: "none", md: "inline" }}
         // _after={{content: "weeb"}}
       ></Text>

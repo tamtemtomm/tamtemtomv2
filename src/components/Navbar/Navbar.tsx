@@ -1,18 +1,29 @@
-import { Container, Flex } from "@chakra-ui/react";
+import {
+  Container,
+  Flex,
+  Button,
+  Text,
+  Link,
+  Box,
+  useColorModeValue,
+} from "@chakra-ui/react";
+import { Link as RouterLink, useLocation } from "react-router-dom";
 
 import NavbarLink from "./NavbarLink";
-import NavbarLogo from "./NavbarLogo";
 import NavbarColorModeButton from "./NavbarColorModeButton";
 
 const Navbar = () => {
+  const { pathname } = useLocation();
+
   return (
     <Container
+      fontFamily={"Source Code Pro"}
       p={0}
       my={4}
       maxW={"container.2xl"}
       display={"flex"}
       flexDirection={"row"}
-      px={{ base: 4, md: 10 }}
+      px={{ base: 4, md: 8 }}
       position={"fixed"}
       zIndex={1}
       overflow={"hidden"}
@@ -21,19 +32,60 @@ const Navbar = () => {
         w={"full"}
         justifyContent={"space-between"}
         alignItems={"center"}
-        gap={{ base: ".1rem", md: "2rem" }}
+        gap={{ base: ".5rem", md: "2rem" }}
       >
-        <NavbarLogo />
-        <Flex
-          fontFamily={"Source Code Pro"}
-          fontWeight={700}
-          fontSize={{ base: 8, md: 16 }}
-          gap={{ base: ".5rem", md: "3rem" }}
-          // textShadow=".2px .2px #19D1C1"
-          display={"flex"}
-        >
-          <NavbarLink link="/about" text=".about?" />
-        </Flex>
+        <Box flex={1} display={"flex"} gap={"1rem"}>
+          {" "}
+          <Link as={RouterLink} to={"/"}>
+            <Button
+              size={{ base: "xs", md: "sm" }}
+              color={"#353BA7"}
+              border={"1px solid"}
+              borderColor={useColorModeValue("gray.200", "transparent")}
+            >
+              <Text
+                _hover={{
+                  transitionDuration: ".4s",
+                  transitionTimingFunction: "ease-in-out",
+                  textShadow: ".5px .5px #19D1C1",
+                }}
+              >
+                {"./"}
+              </Text>
+            </Button>
+          </Link>
+          {pathname != "/" && (
+            <Button
+              size={{ base: "xs", md: "sm" }}
+              color={"whiteAlpha.800"}
+              background="#353BA7"
+              _hover={{
+                transitionDuration: ".4s",
+                transitionTimingFunction: "ease-in-out",
+                textShadow: ".5px .5px #19D1C1",
+              }}
+            >
+              <Text>{pathname}</Text>
+            </Button>
+          )}
+        </Box>
+
+        {pathname == "/" && (
+          <Flex
+            fontWeight={700}
+            fontSize={{ base: 8, md: 16 }}
+            gap={{ base: ".5rem", md: "3rem" }}
+            display={"flex"}
+            _hover={{
+              transitionDuration: ".4s",
+              transitionTimingFunction: "ease-in-out",
+              textShadow: ".5px .5px #19D1C1",
+            }}
+          >
+            <NavbarLink link="/about" text=".about?" />
+          </Flex>
+        )}
+
         <NavbarColorModeButton />
       </Flex>
     </Container>
