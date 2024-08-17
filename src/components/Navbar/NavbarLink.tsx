@@ -9,16 +9,16 @@ interface NavbarLinkInterface {
 const NavbarLink = ({ link, text }: NavbarLinkInterface) => {
   return (
     <RouterLink to={link}>
-      <Button size={{ base: "xs", md: "sm" }} color={"#353BA7"}>
-        <Text
-          _hover={{
-            transitionDuration: ".4s",
-            transitionTimingFunction: "ease-in-out",
-            textShadow: ".5px .5px #19D1C1",
-          }}
-        >
-          {text}
-        </Text>
+      <Button
+        size={{ base: "xs", md: "sm" }}
+        color={"#353BA7"}
+        _hover={{
+          transitionDuration: ".4s",
+          transitionTimingFunction: "ease-in-out",
+          textShadow: ".5px .5px #19D1C1",
+        }}
+      >
+        <Text>{text}</Text>
       </Button>
     </RouterLink>
   );
