@@ -4,16 +4,17 @@ import {
   Text,
   Box,
   Flex,
-  useColorModeValue
+  useColorModeValue,
 } from "@chakra-ui/react";
 
 import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
 
+import HomeTitle from "../../components/Home/HomeTitle";
+import HomeProfilePhoto from "../../components/Home/HomeProfilePhoto";
+import HomeDescription from "../../components/Home/HomeDescription";
 import HomeButton from "../../components/Home/HomeButton";
 import HomeSocial from "../../components/Home/HomeSocial";
 import HomeRotation from "../../components/Home/HomeRotation";
-
-import ProfileImage from "../../assets/pic.jpg";
 
 const Home = () => {
   return (
@@ -36,34 +37,7 @@ const Home = () => {
           gap={".5rem"}
           my={"2rem"}
         >
-          <Text
-            bgGradient="linear(to-b, #2D4286, #698AE8)"
-            bgClip="text"
-            fontWeight={700}
-            fontSize={"3rem"}
-            fontFamily={"Source Code Pro"}
-            cursor={"pointer"}
-            // textShadow='.1px .1px #19d1c1'
-          >
-            Tamtemtom
-            <Text
-              as={"span"}
-              fontSize={"1.5rem"}
-              color={"gray.700"}
-              display={{ base: "none", md: "inline" }}
-            >
-              {" "}
-              :{" "}
-            </Text>
-            <Text
-              as={"span"}
-              fontSize={"1.5rem"}
-              className="span-weeb"
-              color={"#19d1c1"}
-              display={{ base: "none", md: "inline" }}
-              // _after={{content: "weeb"}}
-            ></Text>
-          </Text>
+          <HomeTitle />
           <Flex
             w={"30%"}
             alignItems={"center"}
@@ -80,36 +54,9 @@ const Home = () => {
             />
           </Flex>
 
-          <Box
-            w={{ base: "10rem", md: "12rem" }}
-            h={{ base: "10rem", md: "12rem" }}
-            borderRadius={"50%"}
-            overflow={"hidden"}
-            my={"2rem"}
-          >
-            <img src={ProfileImage} />
-          </Box>
+          <HomeProfilePhoto />
           <VStack>
-            <Text
-              w={"51%"}
-              textAlign={"center"}
-              fontWeight={600}
-              fontFamily={"Open Sans"}
-              fontSize={{ base: 11, sm: 12, md: 15, lg: 16 }}
-              mt={2}
-              color={useColorModeValue("gray.600", "whiteAlpha.800") }
-              cursor={"pointer"}
-              _hover={{
-                transitionDuration: ".4s",
-                transitionTimingFunction: "ease-in-out",
-                textShadow: ".2px .2px #19d1c1",
-              }}
-              // fontFamily={"inter"}
-            >
-              Hi! I am Timo. A college student who loves coding, music, anime,
-              and other wacky stuffs. Feel free to contact me if you wanna chat
-              along!
-            </Text>
+           <HomeDescription/>
             <Box
               display={"flex"}
               alignItems={"center"}
@@ -136,7 +83,8 @@ const Home = () => {
               position="absolute"
               fontSize={{ base: "xs", md: "sm" }}
               bottom={"1rem"}
-              color={"gray.700"}
+              color={useColorModeValue("gray.700", "white")}
+              opacity={useColorModeValue(1, 0.7)}
             >
               Copyright © 2024 Tamtemtom
             </Text>

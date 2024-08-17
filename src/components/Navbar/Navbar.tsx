@@ -1,18 +1,10 @@
-import {
-  Container,
-  Flex,
-  Image,
-  Link,
-  useColorMode,
-  Button,
-} from "@chakra-ui/react";
-import { Link as RouterLink } from "react-router-dom";
+import { Container, Flex } from "@chakra-ui/react";
 
-import Logo from "../../assets/logo.png"
 import NavbarLink from "./NavbarLink";
+import NavbarLogo from "./NavbarLogo";
+import NavbarColorModeButton from "./NavbarColorModeButton";
 
 const Navbar = () => {
-  const { colorMode, toggleColorMode } = useColorMode();
   return (
     <Container
       p={0}
@@ -28,44 +20,21 @@ const Navbar = () => {
       <Flex
         w={"full"}
         justifyContent={"space-between"}
-        alignItems={"center"} 
-        gap={{ base: ".1rem", md: "5rem" }}
+        alignItems={"center"}
+        gap={{ base: ".1rem", md: "2rem" }}
       >
-        <Link as={RouterLink} to={"/"} flex={1}>
-          <Image
-            src={Logo}
-            h={{ base: ".5rem", md: "1.6rem" }}
-            _hover={{
-              h: "1.8rem",
-              transitionDuration: ".4s",
-              transitionTimingFunction: "ease-in-out",
-            }}
-          />
-        </Link>
-
-        {/* <Switch size={"lg"} cursor={"pointer"}/> */}
-        <Button
-          onClick={toggleColorMode}
-          color={"#353BA7"}
-          size={{ base: "xs", md: "sm" }}
-          border={"none"}
-        >
-          .mode = {colorMode === "light" ? "light" : "dark"}
-        </Button>
-
+        <NavbarLogo />
         <Flex
           fontFamily={"Source Code Pro"}
           fontWeight={700}
-          fontSize={{ base: 8, md: 20 }}
+          fontSize={{ base: 8, md: 16 }}
           gap={{ base: ".5rem", md: "3rem" }}
           // textShadow=".2px .2px #19D1C1"
           display={"flex"}
         >
-          <NavbarLink link="/about" text=".about"/>
-          <NavbarLink link="/projects" text=".projects"/>
-          <NavbarLink link="/contact" text=".contact"/>
-          
+          <NavbarLink link="/about" text=".about?" />
         </Flex>
+        <NavbarColorModeButton />
       </Flex>
     </Container>
   );

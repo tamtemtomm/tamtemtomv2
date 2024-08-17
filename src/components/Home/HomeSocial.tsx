@@ -14,7 +14,8 @@ const HomeSocial = ({ link, Icon }: HomeSocialInterface) => {
       {
         <Icon
           size={isLargerThan800 ? "2rem" : "1.5rem"}
-          style={{ color: useColorModeValue("#010309", "#f8f9fe") }}
+          style={{ color: useColorModeValue("#2d3748", "white") }}
+          opacity={useColorModeValue(1, 0.7)}
         />
       }
     </Link>
