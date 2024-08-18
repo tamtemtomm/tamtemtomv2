@@ -1,10 +1,12 @@
-import { Container, VStack, Text, Flex, Box } from "@chakra-ui/react";
+import { Container, VStack, Text, Flex } from "@chakra-ui/react";
 
 // import Construction from "../../components/Utils/Construction";
 
 import AboutHi from "../../components/About/AboutHi";
 import AboutTitle from "../../components/About/AboutTitle";
 import AboutSkillCard from "../../components/About/AboutSkillCard";
+import AboutProjectCard from "../../components/About/AboutProjectCard";
+import { projectList } from "../../components/About/AboutProjectList";
 
 import { FaBrain, FaNodeJs } from "react-icons/fa";
 import { CgSmartphoneChip } from "react-icons/cg";
@@ -42,11 +44,31 @@ const AboutIntro = () => {
 };
 
 const AboutSkill = () => {
+  const skills = [
+    {
+      Icon: FaBrain,
+      text: "Machine Learning",
+      description: "Build a machine learning model for a spesific problem",
+    },
+    {
+      Icon: FaNodeJs,
+      text: "Fullstack Developer",
+      description: "Build frontend and backend for enterprise web application",
+      color: "#19D1C1",
+    },
+    {
+      Icon: CgSmartphoneChip,
+      text: "Internet of Things",
+      description: "Build a gadget that able to be connected trough a network,",
+      color: "#698AE8",
+    },
+  ];
+
   return (
     <Container
       p={0}
       maxW={"container.2xl"}
-      minH={"85vh"}
+      minH={"95vh"}
       display={"flex"}
       flexDirection={"column"}
       justifyContent={"center"}
@@ -66,7 +88,9 @@ const AboutSkill = () => {
           fontWeight={700}
           fontFamily={"Source Code Pro"}
         >
-          <Text color={"#698AE8"} display={"inline"}>.</Text>
+          <Text color={"gray.700"} display={"inline"}>
+            .
+          </Text>
           skill
         </Text>
         <Flex
@@ -76,24 +100,15 @@ const AboutSkill = () => {
           flexDir={{ base: "column", md: "row" }}
           alignItems={"center"}
         >
-          <AboutSkillCard
-            Icon={FaBrain}
-            text="Machine Learning"
-            description="Build a machine learning model for a spesific problem"
-            
-          />
-          <AboutSkillCard
-            Icon={FaNodeJs}
-            text="Fullstack Developer"
-            description="Build frontend and backend for enterprise web application"
-            color="#19D1C1"
-          />
-          <AboutSkillCard
-            Icon={CgSmartphoneChip}
-            text="Internet of Things"
-            description="Build a gadget that able to be connected trough a network,"
-            color="#353BA7"
-          />
+          {skills.map((item, index) => (
+            <AboutSkillCard
+              key={index}
+              Icon={item.Icon}
+              text={item.text}
+              description={item.description}
+              color={item.color}
+            />
+          ))}
         </Flex>
       </VStack>
     </Container>
@@ -110,7 +125,7 @@ const AboutProject = () => {
       flexDirection={"column"}
       justifyContent={"center"}
       alignItems={"center"}
-      pt={1}
+      pt={"12rem"}
       position={"relative"}
     >
       <VStack
@@ -125,13 +140,16 @@ const AboutProject = () => {
           fontWeight={700}
           fontFamily={"Source Code Pro"}
         >
-          .project
+          <Text color={"gray.700"} display={"inline"}>
+            .
+          </Text>
+          project
         </Text>
-        <Flex gap={{ base: "2rem", md: "4rem" }} w={"full"} px={"15%"}>
-          <Box w={"33%"} h={"18rem"} bg={"gray.700"} borderRadius={"md"}></Box>
-          <Box w={"33%"} h={"18rem"} bg={"gray.700"} borderRadius={"md"}></Box>
-          <Box w={"33%"} h={"18rem"} bg={"gray.700"} borderRadius={"md"}></Box>
-        </Flex>
+        <VStack w={"full"} px={"15%"}>
+          {projectList.map((item, index) => (
+            <AboutProjectCard key={index} {...item} />
+          ))}
+        </VStack>
       </VStack>
     </Container>
   );
