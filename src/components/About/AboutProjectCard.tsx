@@ -28,6 +28,7 @@ export interface AboutProjectCardInterface {
   skills: AboutProjectCardIconInterface[];
   links: AboutProjectCardIconInterface[];
   imgs: string[];
+  imgsAlt: string[];
   side?: "left" | "right";
   color?: string;
 }
@@ -49,14 +50,22 @@ const AboutProjectCard = ({
     >
       {side == "left" && (
         <>
-          <AboutProjectCardImage imgs={props.imgs} />
+          <AboutProjectCardImage
+            imgs={props.imgs}
+            imgsAlt={props.imgsAlt}
+            color={color}
+          />
           <AboutProjectCardContent {...props} color={color} />
         </>
       )}
 
       {side == "right" && !isLargerMd && (
         <>
-          <AboutProjectCardImage imgs={props.imgs} />
+          <AboutProjectCardImage
+            imgs={props.imgs}
+            imgsAlt={props.imgsAlt}
+            color={color}
+          />
           <AboutProjectCardContent {...props} color={color} />
         </>
       )}
@@ -64,14 +73,26 @@ const AboutProjectCard = ({
       {side == "right" && isLargerMd && (
         <>
           <AboutProjectCardContent {...props} color={color} />
-          <AboutProjectCardImage imgs={props.imgs} />
+          <AboutProjectCardImage
+            imgs={props.imgs}
+            imgsAlt={props.imgsAlt}
+            color={color}
+          />
         </>
       )}
     </Flex>
   );
 };
 
-const AboutProjectCardImage = ({ imgs }: { imgs: string[] }) => {
+const AboutProjectCardImage = ({
+  imgs,
+  color,
+  imgsAlt,
+}: {
+  imgs: string[];
+  imgsAlt: string[];
+  color: string;
+}) => {
   return (
     <>
       <Box
@@ -84,7 +105,7 @@ const AboutProjectCardImage = ({ imgs }: { imgs: string[] }) => {
         overflow={"hidden"}
       >
         <Box h={"50%"} display={"flex"}>
-          <Box w={"60%"} overflow={"hidden"}>
+          <Box w={"60%"} overflow={"hidden"} position={"relative"}>
             <Image
               src={imgs[0]}
               alt=""
@@ -92,8 +113,33 @@ const AboutProjectCardImage = ({ imgs }: { imgs: string[] }) => {
               h={"100%"}
               objectFit={"cover"}
             />
+            <Box
+              position={"absolute"}
+              top={0}
+              left={0}
+              bg="rgba(1, 3, 9, 0.7)"
+              w={"100%"}
+              h={"100%"}
+              display={"flex"}
+              alignItems={"center"}
+              justifyContent={"center"}
+              zIndex={1}
+              opacity={0}
+              transition={"all .2s ease-in"}
+              _hover={{ opacity: "1" }}
+            >
+              <Text
+                fontSize={{ base: "sm", md: "xl" }}
+                fontFamily={"Source Code Pro"}
+                color={color}
+                fontWeight={700}
+                textAlign={"center"}
+              >
+                {imgsAlt[0]}
+              </Text>
+            </Box>
           </Box>
-          <Box w={"40%"} overflow={"hidden"}>
+          <Box w={"40%"} overflow={"hidden"} position={"relative"}>
             <Image
               src={imgs[1]}
               alt=""
@@ -101,10 +147,35 @@ const AboutProjectCardImage = ({ imgs }: { imgs: string[] }) => {
               h={"100%"}
               objectFit={"cover"}
             />
+            <Box
+              position={"absolute"}
+              top={0}
+              left={0}
+              bg="rgba(1, 3, 9, 0.7)"
+              w={"100%"}
+              h={"100%"}
+              display={"flex"}
+              alignItems={"center"}
+              justifyContent={"center"}
+              zIndex={1}
+              opacity={0}
+              transition={"all .2s ease-in"}
+              _hover={{ opacity: "1" }}
+            >
+              <Text
+                fontSize={{ base: "sm", md: "xl" }}
+                fontFamily={"Source Code Pro"}
+                color={color}
+                fontWeight={700}
+                textAlign={"center"}
+              >
+                {imgsAlt[1]}
+              </Text>
+            </Box>
           </Box>
         </Box>
         <Box h={"50%"} display={"flex"}>
-          <Box w={"40%"} overflow={"hidden"}>
+          <Box w={"40%"} overflow={"hidden"} position={"relative"}>
             <Image
               src={imgs[2]}
               alt=""
@@ -112,8 +183,33 @@ const AboutProjectCardImage = ({ imgs }: { imgs: string[] }) => {
               h={"100%"}
               objectFit={"cover"}
             />
+            <Box
+              position={"absolute"}
+              top={0}
+              left={0}
+              bg="rgba(1, 3, 9, 0.7)"
+              w={"100%"}
+              h={"100%"}
+              display={"flex"}
+              alignItems={"center"}
+              justifyContent={"center"}
+              zIndex={1}
+              opacity={0}
+              transition={"all .2s ease-in"}
+              _hover={{ opacity: "1" }}
+            >
+              <Text
+                fontSize={{ base: "sm", md: "xl" }}
+                fontFamily={"Source Code Pro"}
+                color={color}
+                fontWeight={700}
+                textAlign={"center"}
+              >
+                {imgsAlt[2]}
+              </Text>
+            </Box>
           </Box>
-          <Box overflow={"hidden"} w={"60%"}>
+          <Box overflow={"hidden"} w={"60%"} position={"relative"}>
             <Image
               src={imgs[3]}
               alt=""
@@ -121,6 +217,31 @@ const AboutProjectCardImage = ({ imgs }: { imgs: string[] }) => {
               h={"100%"}
               objectFit={"cover"}
             />
+            <Box
+              position={"absolute"}
+              top={0}
+              left={0}
+              bg="rgba(1, 3, 9, 0.7)"
+              w={"100%"}
+              h={"100%"}
+              display={"flex"}
+              alignItems={"center"}
+              justifyContent={"center"}
+              zIndex={1}
+              opacity={0}
+              transition={"all .2s ease-in"}
+              _hover={{ opacity: "1" }}
+            >
+              <Text
+                fontSize={{ base: "sm", md: "xl" }}
+                fontFamily={"Source Code Pro"}
+                color={color}
+                fontWeight={700}
+                textAlign={"center"}
+              >
+                {imgsAlt[3]}
+              </Text>
+            </Box>
           </Box>
         </Box>
       </Box>

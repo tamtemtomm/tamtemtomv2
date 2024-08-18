@@ -59,6 +59,7 @@ const projectList: AboutProjectCardInterface[] = [
       },
     ],
     imgs: [RobotHomeBrin, RobotHomePcb, RobotHomeHardware, RobotHomeProject],
+    imgsAlt: ["BRIN Indonesia", "PCB Circuit", "Hardware", "Workspace"],
     color: "#698AE8",
   },
   {
@@ -108,6 +109,8 @@ const projectList: AboutProjectCardInterface[] = [
       GlovitooContent,
       GlovitooPresentation,
     ],
+
+    imgsAlt: ["Meeting", "Demo", "Social", "Presentation"],
     side: "right",
   },
   {
@@ -153,8 +156,9 @@ const projectList: AboutProjectCardInterface[] = [
       },
     ],
     imgs: [IgCloneHome, IgCloneProfile, IgCloneSuggested, IgCloneLogin],
+    imgsAlt: ["Homepage", "Profile", "Suggested User", "Login Page"],
     color: "#698AE8",
   },
 ];
 
-export default projectList
+export default projectList;
