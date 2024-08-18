@@ -6,9 +6,9 @@ import {
   VStack,
   useColorModeValue,
   useMediaQuery,
-  Link
+  Link,
 } from "@chakra-ui/react";
-import { Link as RouterLink} from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
 import { IconType } from "react-icons";
 
 export interface AboutProjectCardIconInterface {
@@ -45,6 +45,7 @@ const AboutProjectCard = ({
       h={{ md: "26rem", lg: "28rem" }}
       flexDir={{ base: "column", md: "row" }}
       color={useColorModeValue("gray.700", "whiteAlpha.800")}
+      fontFamily={"Open Sans"}
     >
       {side == "left" && (
         <>
@@ -146,16 +147,23 @@ const AboutProjectCardContent = ({ ...props }: AboutProjectCardInterface) => {
             fontWeight={700}
             flex={1}
             color={props.color}
+            fontFamily={"Source Code Pro"}
           >
             {props.title}
           </Text>
           <Flex gap={"1rem"}>
             {props.links.map((item, index) => (
-              <RouterLink key={index} to={item.link}>
-                <item.Icon size={"1.5rem"}/>
-              </RouterLink>
+              <Link
+                as={RouterLink}
+                key={index}
+                to={item.link}
+                _hover={{
+                  animation: "spin 3s linear infinite",
+                }}
+              >
+                <item.Icon size={"1.5rem"} />
+              </Link>
             ))}
-
           </Flex>
         </Flex>
         <VStack alignItems={"left"} gap={".05rem"}>
@@ -173,15 +181,26 @@ const AboutProjectCardContent = ({ ...props }: AboutProjectCardInterface) => {
         </VStack>
       </Box>
       <VStack alignItems={"left"} gap={".05rem"}>
-        <Text fontSize={"1rem"} fontWeight={700} color={props.color}>
+        <Text
+          fontSize={"1rem"}
+          fontWeight={700}
+          color={props.color}
+          fontFamily={"Source Code Pro"}
+        >
           Overview :
         </Text>
+
         <Text fontSize={".7rem"} fontWeight={500} textAlign={"justify"}>
           {props.overview}
         </Text>
       </VStack>
       <VStack alignItems={"left"} gap={".05rem"}>
-        <Text fontSize={"1rem"} fontWeight={700} color={props.color}>
+        <Text
+          fontSize={"1rem"}
+          fontWeight={700}
+          color={props.color}
+          fontFamily={"Source Code Pro"}
+        >
           Target :
         </Text>
         {props.targets.map((item, index) => (
@@ -196,7 +215,12 @@ const AboutProjectCardContent = ({ ...props }: AboutProjectCardInterface) => {
         ))}
       </VStack>
       <VStack gap={".5rem"} alignItems={"center"}>
-        <Text fontSize={"1rem"} fontWeight={700} color={props.color}>
+        <Text
+          fontSize={"1rem"}
+          fontWeight={700}
+          color={props.color}
+          fontFamily={"Source Code Pro"}
+        >
           Skills
         </Text>
         <Flex justifyContent={"center"} alignItems={"center"} gap={"1rem"}>

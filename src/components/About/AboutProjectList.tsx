@@ -28,7 +28,7 @@ const projectList: AboutProjectCardInterface[] = [
     placeLink:
       "https://elsa.brin.go.id/layanan/persatker/Pusat%20Riset%20Mekatronika%20Cerdas/3050",
     overview:
-      "Project for controlling a 2 DOF robot system using data from the Orbecc Astra Pro depth camera aims to enable the robot to navigate and interact with its environment based on the depth informationobtained from the camera.",
+      "Project for controlling a 2 DOF robot system using data from the Orbecc Astra Pro depth camera aims to enable the robot to navigate and interact with its environment",
     targets: [
       "- Make PCB for Gripper Circuit",
       "- Process camera data",
@@ -111,7 +111,7 @@ const projectList: AboutProjectCardInterface[] = [
     side: "right",
   },
   {
-    title: "Instagram Clone",
+    title: "Insta-Clone",
     timeline: "Aug 2024",
     importance: "Personal Project",
     place: "Home",
