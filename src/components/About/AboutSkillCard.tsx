@@ -5,12 +5,14 @@ interface AboutSkillCardInterface {
   Icon: IconType;
   text: string;
   description: string;
+  color?: string;
 }
 
 const AboutSkillCard = ({
   Icon,
   text,
   description,
+  color="#353BA7"
 }: AboutSkillCardInterface) => {
   return (
     <VStack
@@ -22,17 +24,17 @@ const AboutSkillCard = ({
       alignItems={"center"}
       justifyContent={"center"}
       textAlign={"center"}
-      border={useColorModeValue("none", "1px solid #353BA7")}
+      border={useColorModeValue("none", `1px solid ${color}`)}
     >
-      <Icon size={"3rem"} color="#353BA7" />
+      <Icon size={"3rem"} color={color} />
       <Text
         fontSize={{ base: "xs", md: "lg" }}
-        color="#353BA7"
+        color={color}
         fontWeight={700}
       >
         {text}
       </Text>
-      <Text fontSize={"xs"} fontWeight={600}>
+      <Text fontSize={"xs"} fontWeight={600} color={color}>
         {description}
       </Text>
     </VStack>

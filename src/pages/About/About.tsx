@@ -66,7 +66,8 @@ const AboutSkill = () => {
           fontWeight={700}
           fontFamily={"Source Code Pro"}
         >
-          .skill
+          <Text color={"#698AE8"} display={"inline"}>.</Text>
+          skill
         </Text>
         <Flex
           gap={{ base: "1.5rem", md: "2rem", lg: "4rem" }}
@@ -79,16 +80,19 @@ const AboutSkill = () => {
             Icon={FaBrain}
             text="Machine Learning"
             description="Build a machine learning model for a spesific problem"
+            
           />
           <AboutSkillCard
             Icon={FaNodeJs}
             text="Fullstack Developer"
             description="Build frontend and backend for enterprise web application"
+            color="#19D1C1"
           />
           <AboutSkillCard
             Icon={CgSmartphoneChip}
             text="Internet of Things"
             description="Build a gadget that able to be connected trough a network,"
+            color="#353BA7"
           />
         </Flex>
       </VStack>
