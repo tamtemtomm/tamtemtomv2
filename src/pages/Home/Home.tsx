@@ -21,7 +21,7 @@ const Home = () => {
     <>
       <Container
         maxW={"container.2xl"}
-        minH={"100vh"}
+        minH={"95vh"}
         display={"flex"}
         justifyContent={"center"}
         alignItems={"center"}
@@ -82,7 +82,7 @@ const Home = () => {
             <Text
               position="absolute"
               fontSize={{ base: "xs", md: "sm" }}
-              bottom={"1rem"}
+              bottom={0}
               color={useColorModeValue("gray.700", "white")}
               opacity={useColorModeValue(1, 0.7)}
             >
