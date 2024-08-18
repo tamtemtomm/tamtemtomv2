@@ -19,7 +19,7 @@ import { AiFillFilePpt } from "react-icons/ai";
 import { IoLogoFirebase } from "react-icons/io5";
 import { AboutProjectCardInterface } from "./AboutProjectCard";
 
-export const projectList: AboutProjectCardInterface[] = [
+const projectList: AboutProjectCardInterface[] = [
   {
     title: "Robot-Home",
     timeline: "8 Jan - 19 Feb 2024",
@@ -156,3 +156,5 @@ export const projectList: AboutProjectCardInterface[] = [
     color: "#698AE8",
   },
 ];
+
+export default projectList
