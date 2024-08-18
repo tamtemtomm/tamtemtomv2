@@ -126,6 +126,7 @@ const AboutProject = () => {
       justifyContent={"center"}
       alignItems={"center"}
       position={"relative"}
+      pt={{ base: "10vh", sm: "none" }}
     >
       <VStack
         fontSize={"5xl"}
