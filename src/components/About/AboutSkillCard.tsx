@@ -16,7 +16,7 @@ const AboutSkillCard = ({
     <VStack
       w={{ base: "75%", sm: "60%", md: "35%", lg: "33%" }}
       px={"5%"}
-      py={{ base: "75%", sm: "3rem", md: "3rem", lg: "5rem" }}
+      h={{ base: "10rem", sm: "12rem", md: "15rem", lg: "18rem" }}
       bg={useColorModeValue("gray.200", "black.800")}
       borderRadius={"md"}
       alignItems={"center"}

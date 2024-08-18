@@ -69,7 +69,7 @@ const AboutSkill = () => {
           .skill
         </Text>
         <Flex
-          gap={{ base: ".5rem", sm: "1rem", md: "2rem", lg: "4rem" }}
+          gap={{ base: "1.5rem", md: "2rem", lg: "4rem" }}
           w={"full"}
           px={{ base: "5%", sm: "15%", md: "10%", lg: "15%" }}
           flexDir={{ base: "column", md: "row" }}
