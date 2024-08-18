@@ -17,8 +17,8 @@ const AboutSkillCard = ({
   return (
     <VStack
       w={{ base: "75%", sm: "60%", md: "35%", lg: "33%" }}
-      px={"5%"}
-      h={{ base: "10rem", sm: "12rem", md: "15rem", lg: "18rem" }}
+      px={{ base: "8%", sm: "7%", md: "6%", lg: "5%" }}
+      h={{ base: "11rem", sm: "12rem", md: "15rem", lg: "18rem" }}
       bg={useColorModeValue("gray.200", "black.800")}
       borderRadius={"md"}
       alignItems={"center"}
@@ -28,13 +28,13 @@ const AboutSkillCard = ({
     >
       <Icon size={"3rem"} color={color} />
       <Text
-        fontSize={{ base: "xs", md: "lg" }}
+        fontSize={{ base: "sm", md: "lg" }}
         color={color}
-        fontWeight={700}
+        fontWeight={800}
       >
         {text}
       </Text>
-      <Text fontSize={"xs"} fontWeight={600} color={color}>
+      <Text fontSize={"xs"} fontWeight={500} color={color}>
         {description}
       </Text>
     </VStack>
