@@ -1,4 +1,4 @@
-import { Box, Text, Flex } from "@chakra-ui/react";
+import { Box, Text, Flex, useColorModeValue } from "@chakra-ui/react";
 import FurinaImage from "../../assets/furina.jpg";
 
 const AboutHi = () => {
@@ -32,7 +32,7 @@ const AboutHi = () => {
           display={"flex"}
           alignItems={"center"}
         >
-          Hi, I am Timo
+          Hi, Timo here
         </Text>
       </Box>
 
@@ -41,7 +41,7 @@ const AboutHi = () => {
         display={"inline"}
         lineHeight={{ base: ".5rem", md: ".8rem", lg: "1rem" }}
         textAlign={"left"}
-        color={"gray.700"}
+        color={useColorModeValue("gray.700", "whiteAlpha.700")}
         left={0}
         top={{ base: "-2rem", lg: "-3rem" }}
       >

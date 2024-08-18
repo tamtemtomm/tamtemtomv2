@@ -14,7 +14,7 @@ import HomeProfilePhoto from "../../components/Home/HomeProfilePhoto";
 import HomeDescription from "../../components/Home/HomeDescription";
 import HomeButton from "../../components/Home/HomeButton";
 import HomeSocial from "../../components/Home/HomeSocial";
-import HomeRotation from "../../components/Home/HomeRotation";
+// import HomeRotation from "../../components/Home/HomeRotation";
 
 const Home = () => {
   return (
@@ -91,7 +91,7 @@ const Home = () => {
           </VStack>
         </VStack>
 
-        <HomeRotation />
+        {/* <HomeRotation /> */}
       </Container>
     </>
   );

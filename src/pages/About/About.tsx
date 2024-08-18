@@ -4,6 +4,7 @@
 import AboutIntro from "./Sections/AboutIntro";
 import AboutSkill from "./Sections/AboutSkill";
 import AboutProject from "./Sections/AboutProject";
+import AboutOutro from "./Sections/AboutOutro";
 
 
 const About = () => {
@@ -13,6 +14,7 @@ const About = () => {
       <AboutIntro />
       <AboutSkill />
       <AboutProject />
+      <AboutOutro/>
     </>
   );
 };

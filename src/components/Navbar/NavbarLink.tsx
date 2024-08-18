@@ -18,7 +18,7 @@ const NavbarLink = ({ link, text }: NavbarLinkInterface) => {
           textShadow: ".5px .5px #19D1C1",
         }}
       >
-        <Text>{text}</Text>
+        <Text fontWeight={700}>{text}</Text>
       </Button>
     </RouterLink>
   );

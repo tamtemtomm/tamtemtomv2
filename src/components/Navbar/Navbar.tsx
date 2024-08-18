@@ -42,6 +42,7 @@ const Navbar = () => {
               color={"#353BA7"}
               border={"1px solid"}
               borderColor={useColorModeValue("gray.200", "transparent")}
+              fontWeight={700}
               _hover={{
                 transitionDuration: ".4s",
                 transitionTimingFunction: "ease-in-out",
@@ -57,10 +58,10 @@ const Navbar = () => {
               color={"whiteAlpha.800"}
               background="#353BA7"
               _hover={{
-                  transitionDuration: ".4s",
-                  transitionTimingFunction: "ease-in-out",
-                  textShadow: ".5px .5px #19D1C1",
-                }}
+                transitionDuration: ".4s",
+                transitionTimingFunction: "ease-in-out",
+                textShadow: ".5px .5px #19D1C1",
+              }}
             >
               <Text>{pathname}</Text>
             </Button>

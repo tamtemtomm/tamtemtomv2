@@ -5,7 +5,6 @@ import { CgSmartphoneChip } from "react-icons/cg";
 
 import AboutSkillCard from "../../../components/About/AboutSkillCard";
 
-
 const AboutSkill = () => {
     const skills = [
       {
@@ -47,8 +46,8 @@ const AboutSkill = () => {
         >
           <Text
             color={"#353BA7"}
-            fontSize={{ base: "xl", md: "5xl" }}
-            fontWeight={700}
+            fontSize={{ base: "xl", sm: "3xl", md: "5xl" }}
+            fontWeight={800}
             fontFamily={"Source Code Pro"}
           >
             <Text color={"gray.700"} display={"inline"}>

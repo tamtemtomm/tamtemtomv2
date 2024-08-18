@@ -4,7 +4,7 @@ const HomeTitle = () => {
     <Text
       bg="#2D4286"
       bgClip="text"
-      fontWeight={700}
+      fontWeight={800}
       fontSize={"3rem"}
       fontFamily={"Source Code Pro"}
       cursor={"pointer"}

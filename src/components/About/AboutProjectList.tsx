@@ -111,6 +111,7 @@ const projectList: AboutProjectCardInterface[] = [
     ],
 
     imgsAlt: ["Meeting", "Demo", "Social", "Presentation"],
+    color: "#698AE8",
     side: "right",
   },
   {
