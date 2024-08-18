@@ -45,11 +45,11 @@ const Home = () => {
             gap={4}
           >
             <HomeButton
-              link="https://drive.google.com/file/d/1-u8v1lBgT943PwdGw__ciq9nbbb6gjWs/view?usp=drive_link"
+              link="https://drive.google.com/file/d/1-u8v1lBgT943PwdGw__ciq9nbbb6gjWs/view?usp=sharing"
               text="Curriculum Vitae"
             />
             <HomeButton
-              link="https://drive.google.com/file/d/14saSCBCPc9ErfJ8FCyC_UTZ6JnLk6cdC/view?usp=drive_link"
+              link="https://drive.google.com/file/d/1VICjX_bKVX8E2kE8f7L3WqaDl7u4WqBO/view?usp=sharing"
               text="Portfolio"
             />
           </Flex>
