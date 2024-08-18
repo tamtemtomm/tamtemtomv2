@@ -68,7 +68,7 @@ const AboutSkill = () => {
     <Container
       p={0}
       maxW={"container.2xl"}
-      minH={"95vh"}
+      minH={{ base: "70vh", md: "95vh" }}
       display={"flex"}
       flexDirection={"column"}
       justifyContent={"center"}
@@ -120,19 +120,18 @@ const AboutProject = () => {
     <Container
       p={0}
       maxW={"container.2xl"}
-      minH={"100vh"}
+      minH={{ base: "300vh", md: "300vh" }}
       display={"flex"}
       flexDirection={"column"}
       justifyContent={"center"}
       alignItems={"center"}
-      pt={"12rem"}
       position={"relative"}
     >
       <VStack
         fontSize={"5xl"}
         justifyContent={"flex-start"}
         w={"full"}
-        gap={{ base: "1rem", md: "2rem" }}
+        gap={{ base: "1rem", md: "4rem" }}
       >
         <Text
           color={"#353BA7"}
@@ -145,7 +144,7 @@ const AboutProject = () => {
           </Text>
           project
         </Text>
-        <VStack w={"full"} px={"15%"}>
+        <VStack w={"full"} px={"15%"} display={"flex"} gap={"6rem"}>
           {projectList.map((item, index) => (
             <AboutProjectCard key={index} {...item} />
           ))}

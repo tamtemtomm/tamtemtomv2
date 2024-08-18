@@ -5,17 +5,16 @@ import {
   Text,
   VStack,
   useColorModeValue,
+  useMediaQuery,
+  Link
 } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
-
-import { FaGithub } from "react-icons/fa";
-import { AiFillFilePpt } from "react-icons/ai";
+import { Link as RouterLink} from "react-router-dom";
 import { IconType } from "react-icons";
 
-export interface AboutProjectCardSkillInterface {
+export interface AboutProjectCardIconInterface {
   Icon: IconType;
   link: string;
-  skillText: string;
+  text: string;
 }
 
 export interface AboutProjectCardInterface {
@@ -26,9 +25,8 @@ export interface AboutProjectCardInterface {
   placeLink: string;
   overview: string;
   targets: string[];
-  skills: AboutProjectCardSkillInterface[];
-  repoLink: string;
-  pptLink: string;
+  skills: AboutProjectCardIconInterface[];
+  links: AboutProjectCardIconInterface[];
   imgs: string[];
   side?: "left" | "right";
   color?: string;
@@ -39,6 +37,7 @@ const AboutProjectCard = ({
   color = "#353BA7",
   ...props
 }: AboutProjectCardInterface) => {
+  const [isLargerMd] = useMediaQuery("(min-width: 48em)");
   return (
     <Flex
       gap={{ base: "2rem", md: "2rem", lg: "3rem" }}
@@ -53,9 +52,17 @@ const AboutProjectCard = ({
           <AboutProjectCardContent {...props} color={color} />
         </>
       )}
-      {side == "right" && (
+
+      {side == "right" && !isLargerMd && (
         <>
-          <AboutProjectCardContent {...props} />
+          <AboutProjectCardImage imgs={props.imgs} />
+          <AboutProjectCardContent {...props} color={color} />
+        </>
+      )}
+
+      {side == "right" && isLargerMd && (
+        <>
+          <AboutProjectCardContent {...props} color={color} />
           <AboutProjectCardImage imgs={props.imgs} />
         </>
       )}
@@ -143,12 +150,12 @@ const AboutProjectCardContent = ({ ...props }: AboutProjectCardInterface) => {
             {props.title}
           </Text>
           <Flex gap={"1rem"}>
-            <Link to={props.repoLink}>
-              <FaGithub size={"1.5rem"} />
-            </Link>
-            <Link to={props.pptLink}>
-              <AiFillFilePpt size={"1.5rem"} />
-            </Link>
+            {props.links.map((item, index) => (
+              <RouterLink key={index} to={item.link}>
+                <item.Icon size={"1.5rem"}/>
+              </RouterLink>
+            ))}
+
           </Flex>
         </Flex>
         <VStack alignItems={"left"} gap={".05rem"}>
@@ -158,11 +165,11 @@ const AboutProjectCardContent = ({ ...props }: AboutProjectCardInterface) => {
           <Text fontSize={".7rem"} fontWeight={700}>
             {props.importance}
           </Text>
-          <Link to={props.placeLink}>
+          <RouterLink to={props.placeLink}>
             <Text fontSize={".7rem"} fontWeight={500}>
               {props.place}
             </Text>
-          </Link>
+          </RouterLink>
         </VStack>
       </Box>
       <VStack alignItems={"left"} gap={".05rem"}>
@@ -194,15 +201,16 @@ const AboutProjectCardContent = ({ ...props }: AboutProjectCardInterface) => {
         </Text>
         <Flex justifyContent={"center"} alignItems={"center"} gap={"1rem"}>
           {props.skills.map((item, index) => (
-            <Link key={index} to={item.link}>
+            <Link as={RouterLink} key={index} to={item.link}>
               <Box
                 display={"flex"}
                 flexDir={"column"}
                 alignItems={"center"}
+                justifyContent={"center"}
                 gap={".4rem"}
               >
                 <item.Icon size={"1.2rem"} />
-                <Text fontSize={".7rem"}>{item.skillText}</Text>
+                <Text fontSize={".7rem"}>{item.text}</Text>
               </Box>
             </Link>
           ))}
