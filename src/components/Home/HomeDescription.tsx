@@ -2,7 +2,7 @@ import { Text, useColorModeValue } from "@chakra-ui/react";
 const HomeDescription = () => {
   return (
     <Text
-      w={"51%"}
+      w={{ base: "60%", md: "51%" }}
       textAlign={"center"}
       fontWeight={600}
       fontFamily={"Open Sans"}
