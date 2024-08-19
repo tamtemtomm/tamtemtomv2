@@ -12,10 +12,11 @@ const AboutSkillCard = ({
   Icon,
   text,
   description,
-  color="#353BA7"
+  color = "#353BA7",
 }: AboutSkillCardInterface) => {
   return (
     <VStack
+      className="fade-in"
       w={{ base: "75%", sm: "60%", md: "35%", lg: "33%" }}
       px={{ base: "5%", sm: "4%", md: "3%", lg: "2%" }}
       h={{ base: "11rem", sm: "12rem", md: "15rem", lg: "18rem" }}
@@ -35,7 +36,12 @@ const AboutSkillCard = ({
       >
         {text}
       </Text>
-      <Text fontSize={"xs"} fontWeight={500} color={color} fontFamily={"Open Sans"}>
+      <Text
+        fontSize={"xs"}
+        fontWeight={500}
+        color={color}
+        fontFamily={"Open Sans"}
+      >
         {description}
       </Text>
     </VStack>

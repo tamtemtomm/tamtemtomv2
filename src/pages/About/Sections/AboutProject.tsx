@@ -35,6 +35,7 @@ const AboutProject = () => {
         </Text>
         <VStack w={"full"} px={"15%"} display={"flex"} gap={"6rem"}>
           {projectList.map((item, index) => (
+         
             <AboutProjectCard key={index} {...item} />
           ))}
         </VStack>
