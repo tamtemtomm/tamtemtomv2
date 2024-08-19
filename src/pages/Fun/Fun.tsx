@@ -1,4 +1,4 @@
-import Construction from "../../components/Utils/Construction"
+import Construction from "../../components/Common/Construction"
 
 const Fun = () => {
   return (

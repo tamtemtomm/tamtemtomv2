@@ -281,9 +281,9 @@ const AboutProjectCardContent = ({ ...props }: AboutProjectCardInterface) => {
                 as={RouterLink}
                 key={index}
                 to={item.link}
-                _hover={{
-                  animation: "spin 3s linear infinite",
-                }}
+                // _hover={{
+                //   animation: "spin 3s linear infinite",
+                // }}
               >
                 <item.Icon size={"1.5rem"} />
               </Link>
@@ -301,6 +301,7 @@ const AboutProjectCardContent = ({ ...props }: AboutProjectCardInterface) => {
             <Text
               fontSize={".9rem"}
               fontWeight={700}
+              textDecoration={"underline"}
               _hover={{ color: props.color }}
             >
               {props.place}

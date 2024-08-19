@@ -5,7 +5,9 @@ import {
   Box,
   useColorModeValue,
   Button,
+  Link,
 } from "@chakra-ui/react";
+import { Link as RouterLink } from "react-router-dom";
 import { MdOutlineEmail } from "react-icons/md";
 import { FaLinkedin, FaGithub, FaInstagram, FaCopy } from "react-icons/fa";
 import HomeSocial from "../../../components/Home/HomeSocial";
@@ -71,6 +73,7 @@ const AboutOutro = () => {
             display={"flex"}
             alignItems={"center"}
             gap={"1rem"}
+            pl={"1rem"}
             bg={useColorModeValue("gray.100", "gray.900")}
             // p={{ base: ".5rem", md: "1rem" }}
             borderRadius={"xl"}
@@ -115,6 +118,19 @@ const AboutOutro = () => {
           </Box>
         </Box>
       </VStack>
+      <Link
+        as={RouterLink}
+        to={"https://github.com/tamtemtomm/tamtemtomv2"}
+        position="absolute"
+        fontSize={{ base: "xs", md: "sm" }}
+        bottom={"1rem"}
+        color={useColorModeValue("gray.700", "white")}
+        opacity={useColorModeValue(1, 0.7)}
+        transition={"all .1s ease-in"}
+        _hover={{ fontWeight: 700, textDecoration: "underline" }}
+      >
+        <Text>Copyright © 2024 Tamtemtom</Text>
+      </Link>
     </Container>
   );
 };
