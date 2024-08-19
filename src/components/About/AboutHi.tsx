@@ -32,7 +32,7 @@ const AboutHi = () => {
           display={"flex"}
           alignItems={"center"}
         >
-          Hi, Timo here
+          Hi, Tamtemtom here
         </Text>
       </Box>
 

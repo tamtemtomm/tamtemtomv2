@@ -35,15 +35,16 @@ export interface AboutProjectCardInterface {
 
 const AboutProjectCard = ({
   side = "left",
-  color = "#353BA7",
   ...props
 }: AboutProjectCardInterface) => {
   const [isLargerMd] = useMediaQuery("(min-width: 48em)");
+  const color = useColorModeValue("#353BA7", "#698AE8");
+
   return (
     <Flex
       gap={{ base: "2rem", md: "2rem", lg: "3rem" }}
       w={"full"}
-      h={{ md: "26rem", lg: "28rem" }}
+      h={{ md: "32rem", lg: "34rem" }}
       flexDir={{ base: "column", md: "row" }}
       color={useColorModeValue("gray.700", "whiteAlpha.800")}
       fontFamily={"Open Sans"}
@@ -254,7 +255,7 @@ const AboutProjectCardContent = ({ ...props }: AboutProjectCardInterface) => {
     <Box
       w={{ md: "50%", lg: "40%" }}
       p={"1.4rem"}
-      bg={useColorModeValue("gray.200", "black.800")}
+      bg={useColorModeValue("gray.100", "black.800")}
       border={useColorModeValue("none", `1px solid ${props.color}`)}
       borderRadius={"1rem"}
       display={"flex"}
@@ -270,6 +271,7 @@ const AboutProjectCardContent = ({ ...props }: AboutProjectCardInterface) => {
             color={props.color}
             fontFamily={"Source Code Pro"}
             cursor={"default"}
+            _hover={{ fontWeight: 800 }}
           >
             {props.title}
           </Text>
@@ -289,16 +291,16 @@ const AboutProjectCardContent = ({ ...props }: AboutProjectCardInterface) => {
           </Flex>
         </Flex>
         <VStack alignItems={"left"} gap={".05rem"}>
-          <Text fontSize={".7rem"} fontWeight={700} cursor={"default"}>
+          <Text fontSize={".9rem"} fontWeight={700} cursor={"default"}>
             {props.timeline}
           </Text>
-          <Text fontSize={".7rem"} fontWeight={700} cursor={"default"}>
+          <Text fontSize={".9rem"} fontWeight={700} cursor={"default"}>
             {props.importance}
           </Text>
           <RouterLink to={props.placeLink}>
             <Text
-              fontSize={".7rem"}
-              fontWeight={500}
+              fontSize={".9rem"}
+              fontWeight={700}
               _hover={{ color: props.color }}
             >
               {props.place}
@@ -308,7 +310,7 @@ const AboutProjectCardContent = ({ ...props }: AboutProjectCardInterface) => {
       </Box>
       <VStack alignItems={"left"} gap={".05rem"}>
         <Text
-          fontSize={"1rem"}
+          fontSize={"1.4rem"}
           fontWeight={700}
           color={props.color}
           fontFamily={"Source Code Pro"}
@@ -318,8 +320,8 @@ const AboutProjectCardContent = ({ ...props }: AboutProjectCardInterface) => {
         </Text>
 
         <Text
-          fontSize={".7rem"}
-          fontWeight={500}
+          fontSize={".9rem"}
+          fontWeight={600}
           textAlign={"justify"}
           cursor={"default"}
         >
@@ -328,7 +330,7 @@ const AboutProjectCardContent = ({ ...props }: AboutProjectCardInterface) => {
       </VStack>
       <VStack alignItems={"left"} gap={".05rem"}>
         <Text
-          fontSize={"1rem"}
+          fontSize={"1.4rem"}
           fontWeight={700}
           color={props.color}
           fontFamily={"Source Code Pro"}
@@ -339,8 +341,8 @@ const AboutProjectCardContent = ({ ...props }: AboutProjectCardInterface) => {
         {props.targets.map((item, index) => (
           <Text
             key={index}
-            fontSize={".7rem"}
-            fontWeight={500}
+            fontSize={".9rem"}
+            fontWeight={600}
             textAlign={"justify"}
             cursor={"default"}
           >
@@ -350,10 +352,11 @@ const AboutProjectCardContent = ({ ...props }: AboutProjectCardInterface) => {
       </VStack>
       <VStack gap={".5rem"} alignItems={"center"}>
         <Text
-          fontSize={"1rem"}
+          fontSize={"1.4rem"}
           fontWeight={700}
           color={props.color}
-          fontFamily={"Source Code Pro"}cursor={"default"}
+          fontFamily={"Source Code Pro"}
+          cursor={"default"}
         >
           Skills
         </Text>
@@ -368,7 +371,9 @@ const AboutProjectCardContent = ({ ...props }: AboutProjectCardInterface) => {
                 gap={".4rem"}
               >
                 <item.Icon size={"1.2rem"} />
-                <Text fontSize={".7rem"}>{item.text}</Text>
+                <Text fontSize={".7rem"} fontWeight={600}>
+                  {item.text}
+                </Text>
               </Box>
             </Link>
           ))}

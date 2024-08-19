@@ -5,21 +5,21 @@ interface AboutSkillCardInterface {
   Icon: IconType;
   text: string;
   description: string;
-  color?: string;
 }
 
 const AboutSkillCard = ({
   Icon,
   text,
   description,
-  color = "#353BA7",
 }: AboutSkillCardInterface) => {
+  const color = useColorModeValue("#353BA7", "#698AE8");
+
   return (
     <VStack
       w={{ base: "75%", sm: "60%", md: "35%", lg: "33%" }}
       px={{ base: "5%", sm: "4%", md: "3%", lg: "2%" }}
       h={{ base: "11rem", sm: "12rem", md: "15rem", lg: "18rem" }}
-      bg={useColorModeValue("gray.200", "black.800")}
+      bg={useColorModeValue("gray.100", "black.800")}
       borderRadius={"md"}
       alignItems={"center"}
       justifyContent={"center"}
@@ -36,8 +36,8 @@ const AboutSkillCard = ({
         {text}
       </Text>
       <Text
-        fontSize={"xs"}
-        fontWeight={500}
+        fontSize={{ base: "xs", md: "sm" }}
+        fontWeight={600}
         color={color}
         fontFamily={"Open Sans"}
       >

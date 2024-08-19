@@ -4,10 +4,10 @@ const AboutTitle = () => {
   return (
     <Box>
       <Box
-        fontSize={{ base: "4xl", md: "7xl", lg: "9xl" }}
+        fontSize={{ base: "5xl", sm: "6xl", md: "7xl", lg: "9xl" }}
         fontWeight={700}
         textAlign={"center"}
-        lineHeight={{ base: "2.5rem", md: "4rem", lg: "7rem" }}
+        lineHeight={{ base: "2.8rem", sm: "3.4rem", md: "4rem", lg: "7rem" }}
         fontFamily={"Source Code Pro"}
         position={"relative"}
         style={{ wordSpacing: ".5rem" }}
@@ -29,7 +29,6 @@ const AboutTitle = () => {
         </Box>
 
         <Text>DEVELOPER</Text>
-
       </Box>
     </Box>
   );

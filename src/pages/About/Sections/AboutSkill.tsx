@@ -1,30 +1,10 @@
 import { Container, Flex, VStack, Text } from "@chakra-ui/react";
 
-import { FaBrain, FaNodeJs } from "react-icons/fa";
-import { CgSmartphoneChip } from "react-icons/cg";
-
+import { skills } from "../../../components/About/AboutSkillList";
 import AboutSkillCard from "../../../components/About/AboutSkillCard";
 
 const AboutSkill = () => {
-  const skills = [
-    {
-      Icon: FaBrain,
-      text: "Machine Learning",
-      description: "Build a machine learning model for a spesific problem",
-    },
-    {
-      Icon: FaNodeJs,
-      text: "Fullstack Developer",
-      description: "Build frontend and backend for enterprise web application",
-      color: "#19D1C1",
-    },
-    {
-      Icon: CgSmartphoneChip,
-      text: "Internet of Things",
-      description: "Build a gadget that able to be connected trough a network,",
-      color: "#698AE8",
-    },
-  ];
+  
 
   return (
     <Container
@@ -69,7 +49,6 @@ const AboutSkill = () => {
               Icon={item.Icon}
               text={item.text}
               description={item.description}
-              color={item.color}
             />
           ))}
         </Flex>

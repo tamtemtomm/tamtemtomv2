@@ -5,7 +5,9 @@ import {
   Box,
   Flex,
   useColorModeValue,
+  Link,
 } from "@chakra-ui/react";
+import { Link as RouterLink } from "react-router-dom";
 
 import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
 
@@ -56,7 +58,7 @@ const Home = () => {
 
           <HomeProfilePhoto />
           <VStack>
-           <HomeDescription/>
+            <HomeDescription />
             <Box
               display={"flex"}
               alignItems={"center"}
@@ -79,15 +81,19 @@ const Home = () => {
                 Icon={FaInstagram}
               />
             </Box>
-            <Text
+            <Link
+              as={RouterLink}
+              to={"https://github.com/tamtemtomm/tamtemtomv2"}
               position="absolute"
               fontSize={{ base: "xs", md: "sm" }}
               bottom={0}
               color={useColorModeValue("gray.700", "white")}
               opacity={useColorModeValue(1, 0.7)}
+              transition={"all .1s ease-in"}
+              _hover={{ fontWeight: 700, textDecoration: "underline" }}
             >
-              Copyright © 2024 Tamtemtom
-            </Text>
+              <Text>Copyright © 2024 Tamtemtom</Text>
+            </Link>
           </VStack>
         </VStack>
 
