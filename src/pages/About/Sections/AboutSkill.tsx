@@ -1,4 +1,4 @@
-import { Container, Flex, VStack, Text } from "@chakra-ui/react";
+import { Container, Flex, VStack, Text, useColorModeValue } from "@chakra-ui/react";
 
 import { skills } from "../../../components/About/AboutSkillList";
 import AboutSkillCard from "../../../components/About/AboutSkillCard";
@@ -26,8 +26,8 @@ const AboutSkill = () => {
         gap={{ base: "1rem", md: "2rem" }}
       >
         <Text
-          color={"#353BA7"}
-          fontSize={{ base: "xl", sm: "3xl", md: "5xl" }}
+          color={useColorModeValue("#353BA7", "whiteAlpha.800")}
+          fontSize={{ base: "4xl", md: "5xl" }}
           fontWeight={800}
           fontFamily={"Source Code Pro"}
         >

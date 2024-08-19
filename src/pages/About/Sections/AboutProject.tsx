@@ -1,4 +1,4 @@
-import { Container, VStack, Text } from "@chakra-ui/react";
+import { Container, VStack, Text, useColorModeValue } from "@chakra-ui/react";
 
 import AboutProjectCard from "../../../components/About/AboutProjectCard";
 import projectList from "../../../components/About/AboutProjectList";
@@ -24,8 +24,8 @@ const AboutProject = () => {
         gap={{ base: "1rem", md: "4rem" }}
       >
         <Text
-          color={"#353BA7"}
-          fontSize={{ base: "xl", sm: "3xl", md: "5xl" }}
+          color={useColorModeValue("#353BA7", "whiteAlpha.800")}
+          fontSize={{ base: "4xl", md: "5xl" }}
           fontWeight={800}
           fontFamily={"Source Code Pro"}
         >

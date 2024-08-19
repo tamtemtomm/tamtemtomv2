@@ -265,7 +265,7 @@ const AboutProjectCardContent = ({ ...props }: AboutProjectCardInterface) => {
       <Box>
         <Flex alignItems={"center"} justifyContent={"space-between"}>
           <Text
-            fontSize={{ base: "lg", md: "xl", lg: "2xl" }}
+            fontSize={{ base: "1.3rem", md: "xl", lg: "2xl" }}
             fontWeight={700}
             flex={1}
             color={props.color}
@@ -310,7 +310,7 @@ const AboutProjectCardContent = ({ ...props }: AboutProjectCardInterface) => {
       </Box>
       <VStack alignItems={"left"} gap={".05rem"}>
         <Text
-          fontSize={"1.4rem"}
+          fontSize={"1.3rem"}
           fontWeight={700}
           color={props.color}
           fontFamily={"Source Code Pro"}
@@ -330,7 +330,7 @@ const AboutProjectCardContent = ({ ...props }: AboutProjectCardInterface) => {
       </VStack>
       <VStack alignItems={"left"} gap={".05rem"}>
         <Text
-          fontSize={"1.4rem"}
+          fontSize={"1.3rem"}
           fontWeight={700}
           color={props.color}
           fontFamily={"Source Code Pro"}
@@ -343,7 +343,7 @@ const AboutProjectCardContent = ({ ...props }: AboutProjectCardInterface) => {
             key={index}
             fontSize={".9rem"}
             fontWeight={600}
-            textAlign={"justify"}
+            textAlign={"left"}
             cursor={"default"}
           >
             {item}

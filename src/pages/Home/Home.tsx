@@ -25,6 +25,7 @@ const Home = () => {
         maxW={"container.2xl"}
         minH={"95vh"}
         display={"flex"}
+        flexDir={"column"}
         justifyContent={"center"}
         alignItems={"center"}
         pt={1}
@@ -34,6 +35,7 @@ const Home = () => {
         // bg={theme.colors.background.light}
       >
         <VStack
+          // className="fade-in"
           alignItems={"center"}
           justifyContent="center"
           gap={".5rem"}

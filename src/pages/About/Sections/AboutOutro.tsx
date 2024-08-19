@@ -40,7 +40,7 @@ const AboutOutro = () => {
         gap={{ base: "1rem", md: "2rem" }}
       >
         <Text
-          color={"#698AE8"}
+          color={useColorModeValue("#353BA7", "#698AE8")}
           fontSize={{ base: "xl", sm: "2xl", md: "4xl" }}
           fontWeight={800}
           fontFamily={"Source Code Pro"}
@@ -52,7 +52,10 @@ const AboutOutro = () => {
             {" "}
             .
           </Text>
-          <Text display={"inline"} color={"#353BA7"}>
+          <Text
+            display={"inline"}
+            color={useColorModeValue("#698AE8", "whiteAlpha.800")}
+          >
             build{" "}
           </Text>
           something together!
@@ -61,7 +64,7 @@ const AboutOutro = () => {
           display={"flex"}
           flexDir={"column"}
           alignItems={"center"}
-          gap={"1rem"}
+          gap={".5rem"}
         >
           {" "}
           <Box
@@ -69,7 +72,7 @@ const AboutOutro = () => {
             alignItems={"center"}
             gap={"1rem"}
             bg={useColorModeValue("gray.100", "gray.900")}
-            p={{ base: ".5rem", md: "1rem" }}
+            // p={{ base: ".5rem", md: "1rem" }}
             borderRadius={"xl"}
           >
             <MdOutlineEmail size={"1.4rem"} style={{ color: iconColor }} />

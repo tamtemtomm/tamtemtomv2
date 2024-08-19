@@ -9,7 +9,6 @@ const HomeDescription = () => {
       fontSize={{ base: 11, sm: 12, md: 15, lg: 16 }}
       mt={2}
       color={useColorModeValue("gray.600", "whiteAlpha.800")}
-      opacity={useColorModeValue(1, 0.7)}
       cursor={"pointer"}
       _hover={{
         transitionDuration: ".4s",

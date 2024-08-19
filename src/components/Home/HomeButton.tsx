@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Button, Text } from "@chakra-ui/react";
+import { Button, Text, useColorModeValue } from "@chakra-ui/react";
 import { FaDownload } from "react-icons/fa";
 
 interface HomeButtonInterface {
@@ -12,10 +12,10 @@ const HomeButton = ({ link, text }: HomeButtonInterface) => {
     <Link to={link} rel="noopener noreferrer" target="_blank">
       <Button
         p={"1rem"}
-        fontWeight={600}
+        fontWeight={700}
         fontFamily={"Source Code Pro"}
         display={"flex"}
-        color={"#353BA7"}
+        color={useColorModeValue("#353BA7", "whiteAlpha.800")}
         border={"none"}
         gap={2}
         alignItems={"center"}

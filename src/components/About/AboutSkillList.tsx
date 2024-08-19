@@ -15,6 +15,6 @@ export const skills = [
   {
     Icon: CgSmartphoneChip,
     text: "Internet of Things",
-    description: "Build a gadget that able to be connected trough a network,",
+    description: "Build a gadget that able to be connected through a network",
   },
 ];

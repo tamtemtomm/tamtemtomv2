@@ -16,7 +16,7 @@ const AboutHi = () => {
           h={{ base: "1.2rem", sm: "1rem", md: "3rem" }}
           overflow={"hidden"}
           borderRadius={"full"}
-          style={{ animation: "spin 3s linear infinite" }}
+          // style={{ animation: "spin 3s linear infinite" }}
         >
           <img src={FurinaImage} style={{ objectFit: "contain" }}></img>
         </Box>
@@ -24,7 +24,7 @@ const AboutHi = () => {
           fontSize={{ base: ".4rem", md: "xl", lg: "2xl" }}
           fontWeight={700}
           fontFamily={"Open Sans"}
-          color={"#353BA7"}
+          color={useColorModeValue("#353BA7", "whiteAlpha.800")}
           p={{ base: "1", md: "1", lg: "2" }}
           border={{ base: ".5px solid", md: "2px solid" }}
           borderColor={"#698AE8"}
@@ -32,7 +32,7 @@ const AboutHi = () => {
           display={"flex"}
           alignItems={"center"}
         >
-          Hi, Tamtemtom here
+          Hi, Timo here
         </Text>
       </Box>
 

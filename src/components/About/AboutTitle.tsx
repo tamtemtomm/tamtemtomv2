@@ -1,4 +1,4 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Text, useColorModeValue } from "@chakra-ui/react";
 
 const AboutTitle = () => {
   return (
@@ -12,7 +12,11 @@ const AboutTitle = () => {
         position={"relative"}
         style={{ wordSpacing: ".5rem" }}
       >
-        <Box display={"flex"} gap={{ base: ".5rem", md: "1rem", lg: "2rem" }}>
+        <Box
+          display={"flex"}
+          gap={{ base: ".5rem", md: "1rem", lg: "2rem" }}
+          color={useColorModeValue("#2D4286", "#698AE8")}
+        >
           <Text display={"inline"}>ML</Text>
           <Text display={"inline"}>ENGINEER</Text>
         </Box>
@@ -21,14 +25,14 @@ const AboutTitle = () => {
           <Text
             display={"inline"}
             fontSize={{ base: "2xl", md: "5xl", lg: "7xl" }}
-            color={"gray.700"}
+            color={useColorModeValue("gray.700", "whiteAlpha.800")}
           >
             &
           </Text>
-          <Text color={"#698AE8"}>FULLSTACK</Text>
+          <Text color={useColorModeValue("#698AE8", "#2D4286")}>FULLSTACK</Text>
         </Box>
 
-        <Text>DEVELOPER</Text>
+        <Text color={useColorModeValue("#2D4286", "#698AE8")}>DEVELOPER</Text>
       </Box>
     </Box>
   );

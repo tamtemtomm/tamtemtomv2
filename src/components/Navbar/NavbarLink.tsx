@@ -1,4 +1,4 @@
-import { Text, Button } from "@chakra-ui/react";
+import { Text, Button, useColorModeValue } from "@chakra-ui/react";
 import { Link as RouterLink } from "react-router-dom";
 
 interface NavbarLinkInterface {
@@ -11,7 +11,7 @@ const NavbarLink = ({ link, text }: NavbarLinkInterface) => {
     <RouterLink to={link}>
       <Button
         size={{ base: "xs", md: "sm" }}
-        color={"#353BA7"}
+        color={useColorModeValue("#353BA7", "whiteAlpha.800")}
         _hover={{
           transitionDuration: ".4s",
           transitionTimingFunction: "ease-in-out",

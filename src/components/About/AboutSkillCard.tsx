@@ -38,7 +38,7 @@ const AboutSkillCard = ({
       <Text
         fontSize={{ base: "xs", md: "sm" }}
         fontWeight={600}
-        color={color}
+        color={useColorModeValue("gray.700", "whiteAlpha.800")}
         fontFamily={"Open Sans"}
       >
         {description}

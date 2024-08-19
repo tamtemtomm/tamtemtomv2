@@ -39,7 +39,7 @@ const Navbar = () => {
           <Link as={RouterLink} to={"/"}>
             <Button
               size={{ base: "xs", md: "sm" }}
-              color={"#353BA7"}
+              color={useColorModeValue("#353BA7", "whiteAlpha.800")}
               border={"1px solid"}
               borderColor={useColorModeValue("gray.200", "transparent")}
               fontWeight={700}
@@ -55,7 +55,7 @@ const Navbar = () => {
           {pathname != "/" && (
             <Button
               size={{ base: "xs", md: "sm" }}
-              color={"whiteAlpha.800"}
+              color={"whiteAlpha.900"}
               background="#353BA7"
               _hover={{
                 transitionDuration: ".4s",
