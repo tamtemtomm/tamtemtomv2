@@ -14,7 +14,7 @@ const AboutIntro = () => {
             alignItems={"center"}
             position={"relative"}
           >
-            <VStack>
+            <VStack className="fade-in">
               <AboutHi />
               <AboutTitle />
             </VStack>

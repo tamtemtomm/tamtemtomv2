@@ -1,4 +1,4 @@
-import { Container, VStack, Text, } from "@chakra-ui/react";
+import { Container, VStack, Text } from "@chakra-ui/react";
 
 import AboutProjectCard from "../../../components/About/AboutProjectCard";
 import projectList from "../../../components/About/AboutProjectList";
@@ -17,6 +17,7 @@ const AboutProject = () => {
       pt={{ base: "10vh", sm: "none" }}
     >
       <VStack
+        className="fade-in"
         fontSize={"5xl"}
         justifyContent={"flex-start"}
         w={"full"}
@@ -35,7 +36,6 @@ const AboutProject = () => {
         </Text>
         <VStack w={"full"} px={"15%"} display={"flex"} gap={"6rem"}>
           {projectList.map((item, index) => (
-         
             <AboutProjectCard key={index} {...item} />
           ))}
         </VStack>

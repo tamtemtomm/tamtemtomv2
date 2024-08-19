@@ -41,7 +41,6 @@ const AboutProjectCard = ({
   const [isLargerMd] = useMediaQuery("(min-width: 48em)");
   return (
     <Flex
-      className="fade-in"
       gap={{ base: "2rem", md: "2rem", lg: "3rem" }}
       w={"full"}
       h={{ md: "26rem", lg: "28rem" }}

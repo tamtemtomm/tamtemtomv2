@@ -39,6 +39,7 @@ const AboutSkill = () => {
       position={"relative"}
     >
       <VStack
+        className="fade-in"
         fontSize={"5xl"}
         justifyContent={"flex-start"}
         w={"full"}
