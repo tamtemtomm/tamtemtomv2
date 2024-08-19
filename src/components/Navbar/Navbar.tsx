@@ -72,7 +72,7 @@ const Navbar = () => {
           <Flex
             fontWeight={700}
             fontSize={{ base: 8, md: 16 }}
-            gap={{ base: ".5rem", md: "3rem" }}
+            gap={{ base: ".5rem", md: "1rem" }}
             display={"flex"}
             _hover={{
               transitionDuration: ".4s",
@@ -81,6 +81,7 @@ const Navbar = () => {
             }}
           >
             <NavbarLink link="/about" text=".about?" />
+            <NavbarLink link="/fun" text=".fun?" />
           </Flex>
         )}
 

@@ -269,6 +269,7 @@ const AboutProjectCardContent = ({ ...props }: AboutProjectCardInterface) => {
             flex={1}
             color={props.color}
             fontFamily={"Source Code Pro"}
+            cursor={"default"}
           >
             {props.title}
           </Text>
@@ -288,14 +289,18 @@ const AboutProjectCardContent = ({ ...props }: AboutProjectCardInterface) => {
           </Flex>
         </Flex>
         <VStack alignItems={"left"} gap={".05rem"}>
-          <Text fontSize={".7rem"} fontWeight={700}>
+          <Text fontSize={".7rem"} fontWeight={700} cursor={"default"}>
             {props.timeline}
           </Text>
-          <Text fontSize={".7rem"} fontWeight={700}>
+          <Text fontSize={".7rem"} fontWeight={700} cursor={"default"}>
             {props.importance}
           </Text>
           <RouterLink to={props.placeLink}>
-            <Text fontSize={".7rem"} fontWeight={500}>
+            <Text
+              fontSize={".7rem"}
+              fontWeight={500}
+              _hover={{ color: props.color }}
+            >
               {props.place}
             </Text>
           </RouterLink>
@@ -307,11 +312,17 @@ const AboutProjectCardContent = ({ ...props }: AboutProjectCardInterface) => {
           fontWeight={700}
           color={props.color}
           fontFamily={"Source Code Pro"}
+          cursor={"default"}
         >
           Overview :
         </Text>
 
-        <Text fontSize={".7rem"} fontWeight={500} textAlign={"justify"}>
+        <Text
+          fontSize={".7rem"}
+          fontWeight={500}
+          textAlign={"justify"}
+          cursor={"default"}
+        >
           {props.overview}
         </Text>
       </VStack>
@@ -321,6 +332,7 @@ const AboutProjectCardContent = ({ ...props }: AboutProjectCardInterface) => {
           fontWeight={700}
           color={props.color}
           fontFamily={"Source Code Pro"}
+          cursor={"default"}
         >
           Target :
         </Text>
@@ -330,6 +342,7 @@ const AboutProjectCardContent = ({ ...props }: AboutProjectCardInterface) => {
             fontSize={".7rem"}
             fontWeight={500}
             textAlign={"justify"}
+            cursor={"default"}
           >
             {item}
           </Text>
@@ -340,7 +353,7 @@ const AboutProjectCardContent = ({ ...props }: AboutProjectCardInterface) => {
           fontSize={"1rem"}
           fontWeight={700}
           color={props.color}
-          fontFamily={"Source Code Pro"}
+          fontFamily={"Source Code Pro"}cursor={"default"}
         >
           Skills
         </Text>
