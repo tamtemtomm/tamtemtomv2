@@ -115,7 +115,7 @@ const projectList: AboutProjectCardInterface[] = [
     side: "right",
   },
   {
-    title: "Insta-Clone",
+    title: "InstaClone",
     timeline: "Aug 2024",
     importance: "Personal Project",
     place: "Home",

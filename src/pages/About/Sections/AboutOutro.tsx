@@ -89,7 +89,7 @@ const AboutOutro = () => {
               tamtemtom235@gmail.com
             </Text>
 
-            <Button _focus={{ bg: "gray.400" }} transition={"1s ease"}>
+            <Button _focus={{ bg: "gray.400" }} transition={"1s ease"} borderRightRadius={"xl"}>
               <FaCopy
                 size={"1rem"}
                 style={{ color: iconColor }}

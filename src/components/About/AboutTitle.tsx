@@ -11,6 +11,7 @@ const AboutTitle = () => {
         fontFamily={"Source Code Pro"}
         position={"relative"}
         style={{ wordSpacing: ".5rem" }}
+        // className="glow"
       >
         <Box
           display={"flex"}
@@ -29,7 +30,7 @@ const AboutTitle = () => {
           >
             &
           </Text>
-          <Text color={useColorModeValue("#698AE8", "#2D4286")}>FULLSTACK</Text>
+          <Text color={useColorModeValue("#698AE8", "#2D4286")} >FULLSTACK</Text>
         </Box>
 
         <Text color={useColorModeValue("#2D4286", "#698AE8")}>DEVELOPER</Text>

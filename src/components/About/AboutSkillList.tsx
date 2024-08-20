@@ -5,7 +5,7 @@ export const skills = [
   {
     Icon: FaBrain,
     text: "Machine Learning",
-    description: "Build a machine learning model for a spesific problem",
+    description: "Build a machine learning model for a specific problem",
   },
   {
     Icon: FaNodeJs,
