@@ -86,6 +86,8 @@ const Home = () => {
             <Link
               as={RouterLink}
               to={"https://github.com/tamtemtomm/tamtemtomv2"}
+              rel="noopener noreferrer"
+              target="_blank"
               position="absolute"
               fontSize={{ base: "xs", md: "sm" }}
               bottom={0}

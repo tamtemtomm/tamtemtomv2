@@ -89,7 +89,11 @@ const AboutOutro = () => {
               tamtemtom235@gmail.com
             </Text>
 
-            <Button _focus={{ bg: "gray.400" }} transition={"1s ease"} borderRightRadius={"xl"}>
+            <Button
+              _focus={{ bg: "gray.400" }}
+              transition={"1s ease"}
+              borderRightRadius={"xl"}
+            >
               <FaCopy
                 size={"1rem"}
                 style={{ color: iconColor }}
@@ -121,6 +125,8 @@ const AboutOutro = () => {
       <Link
         as={RouterLink}
         to={"https://github.com/tamtemtomm/tamtemtomv2"}
+        rel="noopener noreferrer"
+        target="_blank"
         position="absolute"
         fontSize={{ base: "xs", md: "sm" }}
         bottom={"1rem"}
