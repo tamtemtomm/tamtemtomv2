@@ -69,7 +69,7 @@ const Home = () => {
               justifyContent={"space-between"}
             >
               <HomeSocial
-                link="https://www.linkedin.com/in/timo-widyanvolta-35a276217/"
+                link="https://www.linkedin.com/in/tamtemtom/"
                 Icon={FaLinkedin}
               />
 
