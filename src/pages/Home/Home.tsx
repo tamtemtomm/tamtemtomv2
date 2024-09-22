@@ -49,7 +49,7 @@ const Home = () => {
             gap={4}
           >
             <HomeButton
-              link="https://drive.google.com/file/d/1-u8v1lBgT943PwdGw__ciq9nbbb6gjWs/view?usp=sharing"
+              link="https://drive.google.com/file/d/1vLxIxoX5hHibr4cLJ-nHk49ChVSEevKP/view?usp=sharing"
               text="Curriculum Vitae"
             />
             <HomeButton
