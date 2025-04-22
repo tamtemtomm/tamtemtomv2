@@ -17,7 +17,7 @@ const HomeDescription = () => {
       }}
       // fontFamily={"inter"}
     >
-      Hi! I am Timo. A college student who loves coding, music, anime, and other
+      Hi! I am Timo. A fresh graduate who loves coding, music, anime, and other
       wacky stuffs. Feel free to contact me if you wanna chat along!
     </Text>
   );
