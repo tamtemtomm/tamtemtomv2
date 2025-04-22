@@ -52,6 +52,7 @@ const AboutProjectCard = ({
       flexDir={{ base: "column", md: "row" }}
       color={useColorModeValue("gray.700", "whiteAlpha.800")}
       fontFamily={"Open Sans"}
+      overflow={"hidden"}
     >
       {side == "left" && (
         <>

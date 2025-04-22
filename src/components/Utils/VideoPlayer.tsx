@@ -8,7 +8,7 @@ const VideoPlayer = ({ url }: VIdeoPlayerInterface) => {
   return (
     <ReactPlayer
       url={url}
-      style={{ position: "relative", top: 0, left: 0 }}
+      style={{ position: "relative", top: 0, left: 0, overflow: "hidden", alignSelf:"center" }}
       width="85%"
       height="100%"
       loop

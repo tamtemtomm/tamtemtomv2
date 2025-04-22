@@ -16,29 +16,23 @@ import IgCloneLogin from "../../assets/projects/instagram-clone/instagram-clone-
 import { SiOpencv, SiArduino, SiPytorch, SiTypescript } from "react-icons/si";
 import { FaReact, FaShare, FaGithub } from "react-icons/fa";
 import { AiFillFilePpt } from "react-icons/ai";
-import { IoLogoFirebase } from "react-icons/io5";
+import { IoLogoFirebase, IoDocument } from "react-icons/io5";
 import { AboutProjectCardInterface } from "./AboutProjectCard";
 
 const projectList: AboutProjectCardInterface[] = [
   {
     title: "Glovitoo",
-    timeline: "Sep - Dec 2023",
-    importance: "PKM Project",
+    timeline: "Sep 2023- Mar 2025",
+    importance: "College Final Project",
     place: "Airlangga University",
     placeLink: "https://unair.ac.id/",
     overview:
-      "Smart Glove for Deaf and Mute designed to translate SIBI Sign Language. Originally developed as a computer vision project, but as time goes on we switch into cyber physical approach.",
+      "Smart Glove for Deaf and Mute designed to translate SIBI Sign Language. Originally developed as a computer vision project, but as time goes on we switch into cyber physical approach. Final project for my thesis",
     targets: [
       "- Make a Glove Gadget that can detect hand movement",
-      "- Make a model that translate SIBI gesture with accuracy above 95%",
     ],
     videoUrl: "https://www.youtube.com/watch?v=LqLWU4SsJis",
     skills: [
-      {
-        Icon: SiOpencv,
-        link: "https://opencv.org/",
-        text: "OpenCV",
-      },
       {
         Icon: SiPytorch,
         link: "https://pytorch.org/",
@@ -57,8 +51,13 @@ const projectList: AboutProjectCardInterface[] = [
         text: "Repository",
       },
       {
+        Icon: IoDocument,
+        link: "https://drive.google.com/file/d/1ISDnVtjC2MA20bdEOr3JKySoP5kx42uR/view?usp=sharing",
+        text: "Presentation",
+      },
+      {
         Icon: AiFillFilePpt,
-        link: "https://docs.google.com/presentation/d/1aGMed3jVOG_rVHBM6hpcwMlXxoQaa5xkKRCH91Av9DI/edit?usp=sharing",
+        link: "https://docs.google.com/presentation/d/10LGEclmdnarD-AjiXiqrFo7ihP6nowSCaV8P8YabLRM/edit?usp=sharing",
         text: "Presentation",
       },
     ],
