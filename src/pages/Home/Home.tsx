@@ -53,7 +53,7 @@ const Home = () => {
               text="Curriculum Vitae"
             />
             <HomeButton
-              link="https://drive.google.com/file/d/1VICjX_bKVX8E2kE8f7L3WqaDl7u4WqBO/view?usp=sharing"
+              link="https://drive.google.com/file/d/1UJklRk7bjJdvr1RVOAkS2Sh9fc6GtO4j/view?usp=sharing"
               text="Portfolio"
             />
           </Flex>
