@@ -21,6 +21,59 @@ import { AboutProjectCardInterface } from "./AboutProjectCard";
 
 const projectList: AboutProjectCardInterface[] = [
   {
+    title: "Glovitoo",
+    timeline: "Sep - Dec 2023",
+    importance: "PKM Project",
+    place: "Airlangga University",
+    placeLink: "https://unair.ac.id/",
+    overview:
+      "Smart Glove for Deaf and Mute designed to translate SIBI Sign Language. Originally developed as a computer vision project, but as time goes on we switch into cyber physical approach.",
+    targets: [
+      "- Make a Glove Gadget that can detect hand movement",
+      "- Make a model that translate SIBI gesture with accuracy above 95%",
+    ],
+    videoUrl: "https://www.youtube.com/watch?v=LqLWU4SsJis",
+    skills: [
+      {
+        Icon: SiOpencv,
+        link: "https://opencv.org/",
+        text: "OpenCV",
+      },
+      {
+        Icon: SiPytorch,
+        link: "https://pytorch.org/",
+        text: "Pytorch",
+      },
+      {
+        Icon: SiArduino,
+        link: "https://www.arduino.cc/",
+        text: "Arduino",
+      },
+    ],
+    links: [
+      {
+        Icon: FaGithub,
+        link: "https://github.com/tamtemtomm/Wangsaff-SIBI",
+        text: "Repository",
+      },
+      {
+        Icon: AiFillFilePpt,
+        link: "https://docs.google.com/presentation/d/1aGMed3jVOG_rVHBM6hpcwMlXxoQaa5xkKRCH91Av9DI/edit?usp=sharing",
+        text: "Presentation",
+      },
+    ],
+    imgs: [
+      GlovitooMeeting,
+      GlovitooPrototipe,
+      GlovitooContent,
+      GlovitooPresentation,
+    ],
+
+    imgsAlt: ["Meeting", "Demo", "Social", "Presentation"],
+    color: "#698AE8",
+    side: "right",
+  },
+  {
     title: "Robot-Home",
     timeline: "8 Jan - 19 Feb 2024",
     importance: "PKL Project",
@@ -61,58 +114,6 @@ const projectList: AboutProjectCardInterface[] = [
     imgs: [RobotHomeBrin, RobotHomePcb, RobotHomeHardware, RobotHomeProject],
     imgsAlt: ["BRIN Indonesia", "PCB Circuit", "Hardware", "Workspace"],
     color: "#698AE8",
-  },
-  {
-    title: "Glovitoo",
-    timeline: "Sep - Dec 2023",
-    importance: "PKM Project",
-    place: "Airlangga University",
-    placeLink: "https://unair.ac.id/",
-    overview:
-      "Smart Glove for Deaf and Mute designed to translate SIBI Sign Language. Originally developed as a computer vision project, but as time goes on we switch into cyber physical approach.",
-    targets: [
-      "- Make a Glove Gadget that can detect hand movement",
-      "- Make a model that translate SIBI gesture with accuracy above 95%",
-    ],
-    skills: [
-      {
-        Icon: SiOpencv,
-        link: "https://opencv.org/",
-        text: "OpenCV",
-      },
-      {
-        Icon: SiPytorch,
-        link: "https://pytorch.org/",
-        text: "Pytorch",
-      },
-      {
-        Icon: SiArduino,
-        link: "https://www.arduino.cc/",
-        text: "Arduino",
-      },
-    ],
-    links: [
-      {
-        Icon: FaGithub,
-        link: "https://github.com/tamtemtomm/Wangsaff-SIBI",
-        text: "Repository",
-      },
-      {
-        Icon: AiFillFilePpt,
-        link: "https://docs.google.com/presentation/d/1aGMed3jVOG_rVHBM6hpcwMlXxoQaa5xkKRCH91Av9DI/edit?usp=sharing",
-        text: "Presentation",
-      },
-    ],
-    imgs: [
-      GlovitooMeeting,
-      GlovitooPrototipe,
-      GlovitooContent,
-      GlovitooPresentation,
-    ],
-
-    imgsAlt: ["Meeting", "Demo", "Social", "Presentation"],
-    color: "#698AE8",
-    side: "right",
   },
   {
     title: "InstaClone",

@@ -1,3 +1,4 @@
+import VideoPlayer from "../Utils/VIdeoPlayer";
 import {
   Flex,
   Box,
@@ -31,6 +32,7 @@ export interface AboutProjectCardInterface {
   imgsAlt: string[];
   side?: "left" | "right";
   color?: string;
+  videoUrl?: string;
 }
 
 const AboutProjectCard = ({
@@ -39,6 +41,8 @@ const AboutProjectCard = ({
 }: AboutProjectCardInterface) => {
   const [isLargerMd] = useMediaQuery("(min-width: 48em)");
   const color = useColorModeValue("#353BA7", "#698AE8");
+
+  console.log(props.videoUrl);
 
   return (
     <Flex
@@ -51,22 +55,30 @@ const AboutProjectCard = ({
     >
       {side == "left" && (
         <>
-          <AboutProjectCardImage
-            imgs={props.imgs}
-            imgsAlt={props.imgsAlt}
-            color={color}
-          />
+          {props.videoUrl ? (
+            <VideoPlayer url={props.videoUrl} />
+          ) : (
+            <AboutProjectCardImage
+              imgs={props.imgs}
+              imgsAlt={props.imgsAlt}
+              color={color}
+            />
+          )}
           <AboutProjectCardContent {...props} color={color} />
         </>
       )}
 
       {side == "right" && !isLargerMd && (
         <>
-          <AboutProjectCardImage
-            imgs={props.imgs}
-            imgsAlt={props.imgsAlt}
-            color={color}
-          />
+          {props.videoUrl ? (
+            <VideoPlayer url={props.videoUrl} />
+          ) : (
+            <AboutProjectCardImage
+              imgs={props.imgs}
+              imgsAlt={props.imgsAlt}
+              color={color}
+            />
+          )}
           <AboutProjectCardContent {...props} color={color} />
         </>
       )}
@@ -74,11 +86,15 @@ const AboutProjectCard = ({
       {side == "right" && isLargerMd && (
         <>
           <AboutProjectCardContent {...props} color={color} />
-          <AboutProjectCardImage
-            imgs={props.imgs}
-            imgsAlt={props.imgsAlt}
-            color={color}
-          />
+          {props.videoUrl ? (
+            <VideoPlayer url={props.videoUrl} />
+          ) : (
+            <AboutProjectCardImage
+              imgs={props.imgs}
+              imgsAlt={props.imgsAlt}
+              color={color}
+            />
+          )}
         </>
       )}
     </Flex>
