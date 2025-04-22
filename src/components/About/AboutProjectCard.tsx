@@ -1,4 +1,4 @@
-import VideoPlayer from "../Utils/VIdeoPlayer";
+import VideoPlayer from "../Utils/VideoPlayer";
 import {
   Flex,
   Box,
